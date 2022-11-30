@@ -5,8 +5,8 @@
 }
 @font-face {
   font-family: "Poppins";
-
-  src: local("Poppins"), url(/Poppins/Poppins-Black.ttf) format("truetype");
+  font-weight: 200;
+  src: local("Poppins"), url(/Poppins/Poppins-Light.ttf) format("truetype");
 }
 @font-face {
   font-family: "Poppins";

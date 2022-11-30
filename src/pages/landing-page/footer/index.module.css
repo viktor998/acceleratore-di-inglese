@@ -1,0 +1,37 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-inline: 32px;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  background: red;
+  align-items: center;
+}
+.root .image {
+  width: 94px;
+  height: 41px;
+  @apply w-[91px] h-[41px] lg:w-[187px] lg:h-[79.57px];
+}
+.copyright {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 99.5%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.otherInformation {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 99.5%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}

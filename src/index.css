@@ -14,14 +14,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
   --clr-red-100: #d4145a;
   --clr-violet-100: #2d224c;
   --clr-violet-200: #d9daf3;
   --clr-violet-300: #8065c9;
+  --clr-green-100: #74dfac;
+  --clr-green-200: #31602a;
 }
 body {
   color: #2d224c;
+  background: white;
 }
 @tailwind base;
 @tailwind components;
@@ -36,12 +38,40 @@ body {
     font-size: 20px;
     line-height: 99.5%;
   }
+  input:focus {
+    outline: none;
+  }
 }
 @layer components {
+  .select-standard,
+  .textfield-standard {
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid var(--clr-violet-300);
+    padding-bottom: 4px;
+    padding-left: 4px;
+    width: 100%;
+  }
+  .tel {
+    background-color: none;
+  }
+  .label-standard {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+  }
   .btn-violet {
     border-radius: 7px;
     background: var(--clr-violet-200);
     color: var(--clr-violet-100);
+  }
+  .btn-green {
+    border-radius: 7px;
+    background: var(--clr-green-100);
+    color: var(--clr-green-200);
   }
   .select-violet {
     border-radius: 7px;
@@ -56,6 +86,9 @@ body {
     /* background-image: none; */
   }
 
+  .btn-sm {
+    padding: 5px 20px;
+  }
   .btn-sm {
     padding: 5px 20px;
   }

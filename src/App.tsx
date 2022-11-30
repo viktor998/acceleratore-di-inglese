@@ -4,13 +4,15 @@ import "./App.css";
 import Agenda from "./pages/Agenda";
 import { Routes, Route, Outlet, Link, Navigate } from "react-router-dom";
 import DefaultLayout from "./layouts/default/index";
+import LandingPage from "./pages/landing-page";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <Routes>
-      <Route path="/" element={<DefaultLayout />}>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/user" element={<DefaultLayout />}>
         <Route index element={<Navigate to="agenda" replace={true} />} />
         <Route path="agenda" element={<Agenda />} />
         <Route
