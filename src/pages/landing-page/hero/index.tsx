@@ -47,9 +47,9 @@ function Hero() {
       <div className={s.intro}>
         <img
           className={s.introBg}
-          src={"/public/images/backgrounds/bg-intro@1440x1091.png"}
+          src={"/images/backgrounds/bg-intro@1440x1091.png"}
           srcSet={
-            "/public/images/backgrounds/bg-intro@390x266.png 390w, /public/images/backgrounds/bg-intro@1024x1091.png 1024w,/public/images/backgrounds/bg-intro@1440x1091.png 1550w"
+            "/images/backgrounds/bg-intro@390x266.png 390w, /images/backgrounds/bg-intro@1024x1091.png 1024w,/images/backgrounds/bg-intro@1440x1091.png 1550w"
           }
           sizes={
             "(max-width:480px) 390px, (max-width:1024px) 1024px, (max-width:1550px) 1550px"
@@ -91,9 +91,9 @@ function Hero() {
           </ul>
           <img
             className={s.astroMobile}
-            src={"/public/images/backgrounds/bg-astro@480px.png"}
+            src={"/images/backgrounds/bg-astro@480px.png"}
             srcSet={
-              "public/images/backgrounds/bg-astro@480px.png 480w, public/images/backgrounds/bg-astro@600px.png 600w, public/images/backgrounds/bg-astro@1440px.png 900w,"
+              "/images/backgrounds/bg-astro@480px.png 480w, /images/backgrounds/bg-astro@600px.png 600w, /images/backgrounds/bg-astro@1440px.png 900w,"
             }
             sizes={
               "(max-width:480px) 480px, (max-width:900px) 600px, (max-width:1024px) 900px,"

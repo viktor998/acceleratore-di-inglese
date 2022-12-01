@@ -18,7 +18,7 @@ function Approved() {
       <div className={s.itemsContainer}>
         <img
           className={s.img}
-          src={"/public/images/backgrounds/main-item@1440px.png"}
+          src={"/images/backgrounds/main-item@1440px.png"}
         />
         <ul className={s.list}>
           <p className={s.heading}>Come funziona il percorso?</p>

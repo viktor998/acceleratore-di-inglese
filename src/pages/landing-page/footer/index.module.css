@@ -52,7 +52,7 @@
     background-repeat: no-repeat !important;
     padding-bottom: 36px;
     background-size: cover !important;
-    background: url("/public/images/backgrounds/bg-footer@1440x316.png");
+    background: url("/images/backgrounds/bg-footer@1440x316.png");
   }
   .root {
     background: none;
