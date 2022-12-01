@@ -14,8 +14,8 @@ function QuickRegSection() {
   const [count, setCount] = useState(0);
 
   return (
-    <section className={cn(s.root, "container mx-auto")}>
-      <QuickRegister />
+    <section className={cn(s.root, "container-padding")}>
+      <QuickRegister className="container" />
     </section>
   );
 }

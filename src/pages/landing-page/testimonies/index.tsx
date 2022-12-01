@@ -45,7 +45,7 @@ function Testimonies() {
           <div className={s.splide}>Three</div>
         </SplideSlide>
       </Splide>
-      <div className="flex flex-row flex-wrap gap-6 justify-center">
+      <div className="flex flex-row flex-wrap gap-6 justify-center container mx-auto container-padding">
         <CaForbes />
 
         <CaLaRepublica />

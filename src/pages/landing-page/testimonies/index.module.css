@@ -15,4 +15,11 @@
 }
 .heading {
   text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 99.5%;
+  text-align: center;
+  color: #ffffff;
 }

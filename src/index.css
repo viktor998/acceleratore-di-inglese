@@ -44,6 +44,7 @@ body {
 }
 @layer components {
   .select-standard,
+  .select-standard option,
   .textfield-standard {
     background: none;
     border-left: none;
@@ -53,6 +54,23 @@ body {
     padding-bottom: 4px;
     padding-left: 4px;
     width: 100%;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 99.5%;
+  }
+  .select-standard,
+  .select-standard option,
+  .textfield-standard,
+  .textfield-standard::placeholder {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 200;
+    max-width: 573px;
+    font-size: 32px;
+    color: var(--clr-violet-300);
+    @apply text-2xl md:text-[32px];
   }
   .tel {
     background-color: none;

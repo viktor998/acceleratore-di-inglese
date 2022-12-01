@@ -2,10 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding-inline: 32px;
+  /* padding-inline: 32px; */
   padding-top: 16px;
-  padding-bottom: 32px;
-  @apply container mx-auto;
+  @apply container mx-auto pb-[64px];
 }
 .heading {
   font-family: "Poppins";
@@ -20,13 +19,16 @@
   flex-direction: column;
   display: flex;
   gap: 11px;
+  align-items: center;
 }
 .bar {
   background: var(--clr-violet-200);
   border-radius: 9px;
   display: grid;
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: 1.2fr 6fr;
   padding: 22px 30px;
+  width: 100%;
+  max-width: 450px;
 }
 .bar p {
   font-style: normal;
@@ -54,3 +56,9 @@
   text-align: center;
   color: #2d224c;
 }
+/* @media only screen and (max-width: 1280px) {
+  .list {
+    width: 50vw;
+    margin-inline: auto;
+  }
+} */

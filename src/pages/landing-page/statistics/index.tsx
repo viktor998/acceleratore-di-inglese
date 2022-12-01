@@ -2,13 +2,14 @@ import { useState } from "react";
 import QuickRegister from "../../../components/forms/quick-register";
 
 import s from "./index.module.css";
+import cn from "classnames";
 function Statistics() {
   const [count, setCount] = useState(0);
 
   return (
     <section className={s.root}>
       <ul className={s.list}>
-        <li className={s.bar}>
+        <li className={cn(s.bar, "container-padding")}>
           <div className={s.megaText}>
             <h2>+30</h2>
             <p>
@@ -20,7 +21,7 @@ function Statistics() {
             Tutor certificati con 1000+ ore di insegnamento.
           </p>
         </li>
-        <li className={s.bar}>
+        <li className={cn(s.bar, "container-padding")}>
           <div className={s.megaText}>
             <h2>
               87<b className="!text-[60px]">su</b>100
@@ -32,7 +33,7 @@ function Statistics() {
             velocizzare i tempi di preparazione
           </p>
         </li>
-        <li className={"flex flex-col items-center"}>
+        <li className={cn("container-padding flex flex-col")}>
           <div className={s.bar}>
             <div className={s.megaText}>
               <h2>98%</h2>
@@ -43,7 +44,7 @@ function Statistics() {
               costo del corso.
             </p>
           </div>
-          <button className="btn-green btn-sm w-[265px] py-6 mx-auto">
+          <button className="btn-green btn-sm w-[265px] py-6 mx-auto my-6 xl:my-10">
             RICHIEDI INFO
           </button>
           {/* </div> */}

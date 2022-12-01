@@ -9,7 +9,7 @@ export const TextField = (props: Props) => {
   const { className, label, ...rest } = props;
   return (
     <div className={cn("flex flex-col", className)}>
-      {label && <label className="label-standard">{label}</label>}
+      {label && <label className="label-standard mb-2">{label}</label>}
       <input className="textfield-standard" {...rest} />
     </div>
   );

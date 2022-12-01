@@ -1,29 +1,29 @@
 .root {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #ffffff;
   gap: 27px;
   box-shadow: 0px 0px 29px 3px #8065c9;
-  border-radius: 17px;
-  max-width: 573px;
-  max-height: 520px;
-  padding: 1.4rem;
+  border-radius: 9px;
+
+  padding: 36px 30px 46px 30px;
   align-items: center;
 }
-@media only screen and (max-width: 1050px) {
+.content {
+  max-width: 573px;
+  max-height: 520px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media only screen and (min-width: 763px) {
   .root {
-    padding: 16px;
+    padding: 36px 30px 46px 30px;
+    border-radius: 17px;
   }
 }
 
-.root input {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 200;
-  max-width: 573px;
-  font-size: 32px;
-  color: var(--clr-violet-300);
-}
 .terms {
   font-family: "Poppins";
   font-style: normal;

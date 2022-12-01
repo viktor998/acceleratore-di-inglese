@@ -12,18 +12,20 @@ function QuickRegister(props: Props) {
 
   return (
     <form className={cn(s.root, className)}>
-      <TextField label="Nome e Cogome" />
-      <TelField label="Tel" />
-      <TextField label="E-mail" />
-      <div className="hidden md:flex flex-row items-center gap-[9px] ">
-        <CheckBox />
-        <p className={s.terms}>
-          Accetto i Termini e le Condizioni della Privacy Policy
-        </p>
+      <div className="flex flex-col gap-6 max-w-[579px]">
+        <TextField placeholder={"Mario Rossi"} label="Nome e Cogome" />
+        <TelField label="Tel" placeholder="333 333 3333" />
+        <TextField placeholder="Write Here" label="E-mail" />
+        <div className="hidden md:flex flex-row items-center gap-[9px] ">
+          <CheckBox />
+          <p className={s.terms}>
+            Accetto i Termini e le Condizioni della Privacy Policy
+          </p>
+        </div>
+        <button className="btn-green btn-sm w-[265px] py-6 mx-auto">
+          RICHIEDI INFO
+        </button>
       </div>
-      <button className="btn-green btn-sm w-[265px] py-6 mx-auto">
-        RICHIEDI INFO
-      </button>
     </form>
   );
 }
