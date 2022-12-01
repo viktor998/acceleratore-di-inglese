@@ -63,43 +63,44 @@ function Hero() {
           </h1>
         </div>
       </div>
-      <div className="relative">
-        <ul className={cn(s.list, "container-padding")}>
-          <li className={s.item}>
-            <img alt={"logo"} src={"/icons/brit.png"} />
-            <p>
-              Tutor <b>madrelingua</b> <br />
-              inglese certificati
-            </p>
-          </li>
-          <li className={s.item}>
-            <img alt={"logo"} src={"/icons/notepad.png"} />
-            <p>
-              Lezioni <b>quando vuoi,</b>
-              <br />
-              anche nel weekend
-            </p>
-          </li>
-          <li className={s.item}>
-            <img alt={"logo"} src={"/icons/snap.png"} />
-            <p>
-              Costa <b>molto meno</b>
-              <br /> delle scuole di inglese
-            </p>
-          </li>
-        </ul>
-        <img
-          className={s.astroMobile}
-          src={"/public/images/backgrounds/bg-astro@480px.png"}
-          srcSet={
-            "public/images/backgrounds/bg-astro@480px.png 480w, public/images/backgrounds/bg-astro@600px.png 600w"
-          }
-          sizes={"(max-width:480px) 480w, (max-width:600px) 600px,"}
-        />
-      </div>
-
-      <div className={s.form}>
-        <QuickRegister className={s.quickReg} />
+      <div className={s.contentRail}>
+        <div className="relative py-4">
+          <ul className={cn(s.list, "container-padding")}>
+            <li className={s.item}>
+              <img alt={"logo"} src={"/icons/brit.png"} />
+              <p>
+                Tutor <b>madrelingua</b> <br />
+                inglese certificati
+              </p>
+            </li>
+            <li className={s.item}>
+              <img alt={"logo"} src={"/icons/notepad.png"} />
+              <p>
+                Lezioni <b>quando vuoi,</b>
+                <br />
+                anche nel weekend
+              </p>
+            </li>
+            <li className={s.item}>
+              <img alt={"logo"} src={"/icons/snap.png"} />
+              <p>
+                Costa <b>molto meno</b>
+                <br /> delle scuole di inglese
+              </p>
+            </li>
+          </ul>
+          <img
+            className={s.astroMobile}
+            src={"/public/images/backgrounds/bg-astro@480px.png"}
+            srcSet={
+              "public/images/backgrounds/bg-astro@480px.png 480w, public/images/backgrounds/bg-astro@600px.png 600w"
+            }
+            sizes={"(max-width:480px) 480w, (max-width:600px) 600px,"}
+          />
+        </div>
+        <div className={s.form}>
+          <QuickRegister className={s.quickReg} />
+        </div>
       </div>
     </section>
   );
