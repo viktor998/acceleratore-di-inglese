@@ -26,6 +26,13 @@ function Testimonies() {
           arrows: false,
           gap: "22px",
           perPage: 1,
+          fixedWidth: "283px",
+          fixedHeight: "466px",
+          breakpoints: {
+            1280: {
+              perPage: 6,
+            },
+          },
           autoScroll: {
             pauseOnHover: true,
             pauseOnFocus: true,
@@ -44,16 +51,33 @@ function Testimonies() {
         <SplideSlide>
           <div className={s.splide}>Three</div>
         </SplideSlide>
+        <SplideSlide>
+          <div className={s.splide}>Three</div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className={s.splide}>Three</div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className={s.splide}>Three</div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className={s.splide}>Three</div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className={s.splide}>Three</div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className={s.splide}>Three</div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className={s.splide}>Three</div>
+        </SplideSlide>
       </Splide>
-      <div className="flex flex-row flex-wrap gap-6 justify-center container mx-auto container-padding">
+      <div className={s.svgContainer}>
         <CaForbes />
-
         <CaLaRepublica />
-
         <CaLaGazetta />
-
         <CaToday />
-
         <CaRTL />
       </div>
     </section>

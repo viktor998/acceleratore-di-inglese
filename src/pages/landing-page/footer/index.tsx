@@ -29,11 +29,21 @@ function Footer() {
               src={"/images/logos/hero-logo.png"}
             />
             <div className="flex flex-row gap-[2px]">
-              <CaFacebook />
-              <CaInstagram />
-              <CaLinkedIn />
-              <CaYoutube />
-              <CaTiktok />
+              <a href="/#">
+                <CaFacebook />
+              </a>
+              <a href="/#">
+                <CaInstagram />
+              </a>
+              <a href="/#">
+                <CaLinkedIn />
+              </a>
+              <a href="/#">
+                <CaYoutube />
+              </a>
+              <a href="/#">
+                <CaTiktok />
+              </a>
             </div>
           </div>
           <p className={s.otherInformation}>

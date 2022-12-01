@@ -52,7 +52,7 @@ function Hero() {
             "/public/images/backgrounds/bg-intro@390x266.png 390w, /public/images/backgrounds/bg-intro@1024x1091.png 1024w,/public/images/backgrounds/bg-intro@1440x1091.png 1550w"
           }
           sizes={
-            "(max-width:480px) 390px, (max-width:1024px) 1024px, (max-width:1550px) 1550px,"
+            "(max-width:480px) 390px, (max-width:1024px) 1024px, (max-width:1550px) 1550px"
           }
         />
         <div className={s["text-box"]}>
@@ -64,7 +64,7 @@ function Hero() {
         </div>
       </div>
       <div className={s.contentRail}>
-        <div className="relative py-4">
+        <div className={cn("relative py-4", s.listContainer)}>
           <ul className={cn(s.list, "container-padding")}>
             <li className={s.item}>
               <img alt={"logo"} src={"/icons/brit.png"} />
@@ -93,9 +93,11 @@ function Hero() {
             className={s.astroMobile}
             src={"/public/images/backgrounds/bg-astro@480px.png"}
             srcSet={
-              "public/images/backgrounds/bg-astro@480px.png 480w, public/images/backgrounds/bg-astro@600px.png 600w"
+              "public/images/backgrounds/bg-astro@480px.png 480w, public/images/backgrounds/bg-astro@600px.png 600w, public/images/backgrounds/bg-astro@1440px.png 900w,"
             }
-            sizes={"(max-width:480px) 480w, (max-width:600px) 600px,"}
+            sizes={
+              "(max-width:480px) 480px, (max-width:900px) 600px, (max-width:1024px) 900px,"
+            }
           />
         </div>
         <div className={s.form}>

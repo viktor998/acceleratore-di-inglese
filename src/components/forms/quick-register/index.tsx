@@ -16,7 +16,7 @@ function QuickRegister(props: Props) {
         <TextField placeholder={"Mario Rossi"} label="Nome e Cogome" />
         <TelField label="Tel" placeholder="333 333 3333" />
         <TextField placeholder="Write Here" label="E-mail" />
-        <div className="hidden md:flex flex-row items-center gap-[9px] ">
+        <div className="hidden lg:flex flex-row items-center gap-[9px] ">
           <CheckBox />
           <p className={s.terms}>
             Accetto i Termini e le Condizioni della Privacy Policy

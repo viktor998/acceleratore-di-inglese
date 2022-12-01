@@ -52,4 +52,22 @@
     background-size: cover !important;
     background: url("/public/images/backgrounds/bg-footer@1440x316.png");
   }
+  .root {
+    background: none;
+  }
+  .otherInformation {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 99.5%;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .copyright {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 99.5%;
+    width: fit-content;
+    margin: 0 auto;
+  }
 }

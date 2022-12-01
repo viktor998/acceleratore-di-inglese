@@ -1,13 +1,16 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding-top: 34px;
-  padding-bottom: 30px;
-  background: red;
+  /* gap: 20px; */
+  padding-top: 107px;
+  padding-bottom: 205px;
+  background: url("/public//images//backgrounds//bg-testi@480px.png");
+  background-size: 100% 100%;
+  background-position: center center;
 }
 .splide {
   height: 468px;
+  width: 283px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,4 +25,36 @@
   line-height: 99.5%;
   text-align: center;
   color: #ffffff;
+  margin-bottom: 107px;
+}
+.svgContainer {
+  padding-inline: min(32px, 2vw);
+  @apply flex flex-row flex-wrap gap-6 justify-center mt-10 container mx-auto;
+}
+.svgContainer svg {
+  height: 30px;
+  /* width: 98px; */
+}
+
+@media only screen and (min-width: 1280px) {
+  .svgContainer svg {
+    height: 70.32px;
+    /* width: 98px; */
+    margin-bottom: 6rem;
+  }
+  .heading {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .root {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    padding-top: 107px;
+    padding-bottom: 205px;
+    background: url("/public/images/backgrounds/bg-testi@1440px.png");
+    background-size: 100% 100%;
+    background-position: center center;
+  }
 }
