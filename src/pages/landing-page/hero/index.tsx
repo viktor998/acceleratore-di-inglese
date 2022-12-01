@@ -90,14 +90,16 @@ function Hero() {
             </li>
           </ul>
           <img
-            className={s.astroMobile}
+            className={s.astroMobile1}
             src={"/images/backgrounds/bg-astro@480px.png"}
             srcSet={
-              "/images/backgrounds/bg-astro@480px.png 480w, /images/backgrounds/bg-astro@600px.png 600w, /images/backgrounds/bg-astro@1440px.png 900w,"
+              "/images/backgrounds/bg-astro@480px.png 480w, /images/backgrounds/bg-astro@600px.png 600w,"
             }
-            sizes={
-              "(max-width:480px) 480px, (max-width:900px) 600px, (max-width:1024px) 900px,"
-            }
+            sizes={"(max-width:480px) 480px, (max-width:900px) 600px"}
+          />
+          <img
+            className={s.astroMobile2}
+            src={"/images/backgrounds/bg-astro@1440px.png"}
           />
         </div>
         <div className={s.form}>

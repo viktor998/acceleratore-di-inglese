@@ -160,13 +160,16 @@
   padding: 36px min(32px, 2vw);
   background: #d9daf3;
 }
-.astroMobile {
+.astroMobile1 {
   /* float: right; */
   position: absolute;
   right: -20px;
   top: 0;
   z-index: 3;
   object-fit: contain;
+}
+.astroMobile2 {
+  display: none;
 }
 
 @media only screen and (min-width: 600px) {
@@ -187,13 +190,17 @@
   .form .quickReg {
     max-width: 454px;
   }
-  .astroMobile {
+  .astroMobile1,
+  .astroMobile2 {
     /* float: right; */
     position: absolute;
     right: 20px;
     top: 0;
     z-index: 3;
   }
+  /* .astroMobile2 {
+    display: none;
+  } */
 }
 .contentRail {
   display: flex;
@@ -225,9 +232,12 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .hero .astroMobile {
-    /* display: none; */
-    top: -69%;
+  .astroMobile1 {
+    display: none;
+  }
+  .hero .astroMobile2 {
+    display: block;
+    top: -50vh;
     left: -5vw;
     transform: scale(0.7);
   }
@@ -282,7 +292,14 @@
 }
 @media only screen and (min-width: 1280px) {
   .list {
-    gap: 80px;
+    gap: 60px;
+    margin-top: 4rem;
+  }
+  .hero .astroMobile2 {
+    display: block;
+    top: -50vh;
+    left: -4vw;
+    transform: translateX(-2rem) scale(0.7);
   }
   .item p {
     font-size: 32px;
@@ -329,6 +346,12 @@
   }
   .text-box h1 {
     font-size: 72px;
+  }
+  .hero .astroMobile2 {
+    /* display: block;
+    top: -50vh;
+    left: -5vw; */
+    transform: scale(1);
   }
 }
 @media only screen and (max-width: 600px) and (min-height: 568px) {
