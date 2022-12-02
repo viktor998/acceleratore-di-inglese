@@ -50,8 +50,9 @@ function Footer() {
             www.edusogno.com - Realizzato con il 🧠 in 🇮🇹
           </p>
           <p className={s.copyright}>
-            Copyright © 2022 Edusogno. Tutti i diritti riservati. |Privacy
-            Policy |Cookie Policy |P.IVA 08587960728
+            Copyright © 2022 Edusogno. Tutti i diritti riservati. |&nbsp;
+            <a href="/#">Privacy Policy</a>&nbsp;|&nbsp;
+            <a href="/#">Cookie Policy</a>&nbsp;|P.IVA 08587960728
           </p>
         </div>
       </div>

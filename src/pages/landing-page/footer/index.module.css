@@ -1,6 +1,9 @@
 .root {
   background: #d9daf3;
 }
+.root a {
+  text-decoration: underline;
+}
 .content {
   /* padding-inline: 32px; */
   padding-top: 83px;
@@ -29,8 +32,16 @@
   line-height: 99.5%;
   display: flex;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
   color: #ffffff;
+  white-space: nowrap;
+  text-align: center;
+  @apply pl-4 lg:pl-0;
+}
+.copyright a {
+  white-space: nowrap;
 }
 .otherInformation {
   font-family: "Poppins";

@@ -45,7 +45,7 @@ function Hero() {
     // </section>
     <section className={s.hero}>
       <div className={s.intro}>
-        <img
+        {/* <img
           className={s.introBg}
           src={"/images/backgrounds/bg-intro@1440x1091.png"}
           srcSet={
@@ -54,6 +54,34 @@ function Hero() {
           sizes={
             "(max-width:480px) 390px, (max-width:1024px) 1024px, (max-width:1550px) 1550px"
           }
+        /> */}
+        <picture>
+          <source
+            media="(max-width:500px)"
+            srcSet="/images/backgrounds/bg-intro@390x266.png"
+          />
+          <source
+            media="(max-width:900px)"
+            srcSet="/images/backgrounds/bg-intro@600x414.png"
+          />
+          <source
+            media="(max-width:1024px)"
+            srcSet="/images/backgrounds/bg-intro@1024x1091.png"
+          />
+          <source
+            media="(max-width:1440px)"
+            srcSet="/images/backgrounds/bg-intro@1440x1091.png"
+          />
+          <img
+            src="/images/backgrounds/bg-intro@1550x414.png"
+            className={s.introBg}
+            alt="astronaut"
+          />
+        </picture>
+
+        <img
+          className={s.astroMobile2}
+          src={"/images/backgrounds/bg-astro@1440px.png"}
         />
         <div className={s["text-box"]}>
           <img alt={"logo"} src={"/images/logos/hero-logo.png"} />
@@ -64,8 +92,8 @@ function Hero() {
         </div>
       </div>
       <div className={s.contentRail}>
-        <div className={cn("relative py-4", s.listContainer)}>
-          <ul className={cn(s.list, "container-padding")}>
+        <div className={cn("relative py-4 container-padding", s.listContainer)}>
+          <ul className={cn(s.list, "")}>
             <li className={s.item}>
               <img alt={"logo"} src={"/icons/brit.png"} />
               <p>
@@ -89,18 +117,25 @@ function Hero() {
               </p>
             </li>
           </ul>
-          <img
-            className={s.astroMobile1}
-            src={"/images/backgrounds/bg-astro@480px.png"}
-            srcSet={
-              "/images/backgrounds/bg-astro@480px.png 480w, /images/backgrounds/bg-astro@600px.png 600w,"
-            }
-            sizes={"(max-width:480px) 480px, (max-width:900px) 600px"}
-          />
-          <img
-            className={s.astroMobile2}
-            src={"/images/backgrounds/bg-astro@1440px.png"}
-          />
+          <picture>
+            <source
+              media="(max-width:360px)"
+              srcSet="/images/backgrounds/bg-astro@360px.png"
+            />
+            <source
+              media="(max-width:480px)"
+              srcSet="/images/backgrounds/bg-astro@480px.png"
+            />
+            <source
+              media="(max-width:600px)"
+              srcSet="/images/backgrounds/bg-astro@600px.png"
+            />
+            <img
+              src="/images/backgrounds/bg-astro@600px.png"
+              className={s.astroMobile1}
+              alt="astronaut"
+            />
+          </picture>
         </div>
         <div className={s.form}>
           <QuickRegister className={s.quickReg} />

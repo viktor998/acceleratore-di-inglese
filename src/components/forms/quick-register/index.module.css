@@ -18,7 +18,7 @@
 }
 @media only screen and (min-width: 1024px) {
   .root {
-    padding: 36px 30px 46px 30px;
+    padding: 36px 30px 36px 30px;
     border-radius: 17px;
   }
 }

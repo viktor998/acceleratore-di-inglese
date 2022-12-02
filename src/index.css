@@ -90,6 +90,7 @@ body {
     border-radius: 7px;
     background: var(--clr-green-100);
     color: var(--clr-green-200);
+    font-weight: 600;
   }
   .select-violet {
     border-radius: 7px;

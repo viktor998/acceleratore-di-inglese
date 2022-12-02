@@ -14,8 +14,8 @@ function QuickRegister(props: Props) {
     <form className={cn(s.root, className)}>
       <div className="flex flex-col gap-6 max-w-[579px]">
         <TextField placeholder={"Mario Rossi"} label="Nome e Cogome" />
-        <TelField label="Tel" placeholder="333 333 3333" />
-        <TextField placeholder="Write Here" label="E-mail" />
+        <TelField label="Telefono" placeholder="333 333 3333" />
+        <TextField placeholder="mariorossi@email.com" label="E-mail" />
         <div className="hidden lg:flex flex-row items-center gap-[9px] ">
           <CheckBox />
           <p className={s.terms}>

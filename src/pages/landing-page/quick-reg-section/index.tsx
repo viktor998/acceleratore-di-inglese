@@ -15,7 +15,7 @@ function QuickRegSection() {
 
   return (
     <section className={cn(s.root, "container-padding")}>
-      <QuickRegister className="container" />
+      <QuickRegister className="container !max-w-[1115px]" />
     </section>
   );
 }

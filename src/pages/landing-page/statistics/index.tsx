@@ -24,7 +24,7 @@ function Statistics() {
         <li className={cn(s.bar, "container-padding")}>
           <div className={s.megaText}>
             <h2>
-              87<b className="!text-[60px]">su</b>100
+              87&nbsp;<b className="md:text-[60px]">su</b>&nbsp;100
             </h2>
             <p> Prendono il C1</p>
           </div>

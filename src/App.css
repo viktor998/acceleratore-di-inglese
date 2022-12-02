@@ -1,4 +1,4 @@
 /* container properties */
 .container-padding {
-  padding-inline: min(32px, 2vw);
+  padding-inline: min(32px, 4.2vw);
 }
