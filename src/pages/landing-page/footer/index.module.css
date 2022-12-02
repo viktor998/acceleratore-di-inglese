@@ -36,11 +36,11 @@
   flex-wrap: wrap;
   text-align: center;
   color: #ffffff;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   text-align: center;
-  @apply pl-4 lg:pl-0;
+  @apply lg:pl-0;
 }
-.copyright a {
+.copyright p {
   white-space: nowrap;
 }
 .otherInformation {
@@ -63,7 +63,7 @@
     background-repeat: no-repeat !important;
     padding-bottom: 36px;
     background-size: cover !important;
-    background: url("/images/backgrounds/bg-footer@1440x316.png");
+    background: url("/images/backgrounds/bg-footer@1440x316.svg");
   }
   .root {
     background: none;
@@ -82,5 +82,11 @@
     line-height: 99.5%;
     width: fit-content;
     margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 2515px) {
+  .content {
+    /* padding-inline: 32px; */
+    padding-top: 207px;
   }
 }

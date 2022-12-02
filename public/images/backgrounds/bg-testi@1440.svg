@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="" height="" viewBox="-26.18 265.534 1667.812 1049.062" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect y="-1.793" width="2119.544" height="1445.757" fill="#2D224C" style="" x="-304.08"/>
+  <path style="mix-blend-mode:color-dodge" d="M 1249.877 1135.194 C 1345.147 1135.194 1422.377 1060.024 1422.377 967.307 C 1422.377 874.588 1345.147 799.424 1249.877 799.424 C 1154.608 799.424 1077.377 874.588 1077.377 967.307 C 1077.377 1060.024 1154.608 1135.194 1249.877 1135.194 Z" fill="url(#paint0_radial_219_27)"/>
+  <path style="mix-blend-mode:color-dodge" d="M 443.818 532.911 C 518.22 532.911 578.534 474.211 578.534 401.801 C 578.534 329.39 518.22 326.5 443.818 326.5 C 369.416 326.5 309.102 329.39 309.102 401.801 C 309.102 474.211 369.416 532.911 443.818 532.911 Z" fill="url(#paint2_radial_219_27)"/>
+  <defs>
+    <radialGradient id="paint0_radial_219_27" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(41.294754, -163.329559, 167.092178, 42.246059, 1224.370773, 983.568405)">
+      <stop stop-color="#F0EEF7"/>
+      <stop offset="0.02" stop-color="#E6E4ED"/>
+      <stop offset="0.13" stop-color="#B1B0B6"/>
+      <stop offset="0.25" stop-color="#828186"/>
+      <stop offset="0.36" stop-color="#5A595C"/>
+      <stop offset="0.48" stop-color="#39393B"/>
+      <stop offset="0.6" stop-color="#202021"/>
+      <stop offset="0.73" stop-color="#0E0E0F"/>
+      <stop offset="0.86" stop-color="#030304"/>
+      <stop offset="1"/>
+    </radialGradient>
+    <radialGradient id="paint2_radial_219_27" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(32.24966, -127.554287, 130.492827, 32.992614, 423.896942, 414.501877)">
+      <stop stop-color="#F0EEF7"/>
+      <stop offset="0.02" stop-color="#E6E4ED"/>
+      <stop offset="0.13" stop-color="#B1B0B6"/>
+      <stop offset="0.25" stop-color="#828186"/>
+      <stop offset="0.36" stop-color="#5A595C"/>
+      <stop offset="0.48" stop-color="#39393B"/>
+      <stop offset="0.6" stop-color="#202021"/>
+      <stop offset="0.73" stop-color="#0E0E0F"/>
+      <stop offset="0.86" stop-color="#030304"/>
+      <stop offset="1"/>
+    </radialGradient>
+  </defs>
+</svg>

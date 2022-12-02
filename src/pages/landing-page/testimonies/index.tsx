@@ -18,68 +18,90 @@ function Testimonies() {
 
   return (
     <section className={s.root}>
-      <p className={s.heading}>Ecco cosa dicono di noi</p>
-      <Splide
-        options={{
-          type: "loop",
-          pagination: false,
-          arrows: false,
-          gap: "22px",
-          perPage: 1,
-          fixedWidth: "283px",
-          fixedHeight: "466px",
-          breakpoints: {
-            1280: {
-              perPage: 6,
+      <picture>
+        <source
+          media="(max-width:528px)"
+          srcSet="/images/backgrounds/bg-testi@480px.svg"
+        />
+        {/* <source
+          media="(min-width:528px)"
+          srcSet="/images/backgrounds/bg-intro@528.svg"
+        /> */}
+        <img
+          src="/images/backgrounds/bg-testi@1440.svg"
+          className={s.introBg}
+          alt="astronaut"
+        />
+      </picture>
+      <div className={s.content}>
+        <p className={s.heading}>Ecco cosa dicono di noi</p>
+        <Splide
+          options={{
+            type: "loop",
+            pagination: false,
+            arrows: false,
+            gap: "22px",
+            perPage: 1,
+            fixedWidth: "283px",
+            fixedHeight: "466px",
+            breakpoints: {
+              1280: {
+                perPage: 6,
+              },
             },
-          },
-          autoScroll: {
-            pauseOnHover: true,
-            pauseOnFocus: true,
-            speed: 1,
-          },
-        }}
-        extensions={{ AutoScroll }}
-        aria-label="My Favorite Images"
-      >
-        <SplideSlide>
-          <div className={s.splide}>One</div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className={s.splide}>Two</div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className={s.splide}>Three</div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className={s.splide}>Three</div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className={s.splide}>Three</div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className={s.splide}>Three</div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className={s.splide}>Three</div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className={s.splide}>Three</div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className={s.splide}>Three</div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className={s.splide}>Three</div>
-        </SplideSlide>
-      </Splide>
-      <div className={s.svgContainer}>
-        <CaForbes />
-        <CaLaRepublica />
-        <CaLaGazetta />
-        <CaToday />
-        <CaRTL />
+            autoScroll: {
+              pauseOnHover: true,
+              pauseOnFocus: true,
+              speed: 1,
+            },
+          }}
+          extensions={{ AutoScroll }}
+          aria-label="My Favorite Images"
+        >
+          <SplideSlide>
+            <div className={s.splide}>One</div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={s.splide}>Two</div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={s.splide}>Three</div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={s.splide}>Three</div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={s.splide}>Three</div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={s.splide}>Three</div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={s.splide}>Three</div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={s.splide}>Three</div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={s.splide}>Three</div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className={s.splide}>Three</div>
+          </SplideSlide>
+        </Splide>
+        <div className={s.svgContainer}>
+          <CaForbes />
+          <CaLaRepublica />
+          <CaLaGazetta />
+          <CaToday />
+          <CaRTL />
+        </div>
       </div>
+      <img
+        src="/images/backgrounds/test1.svg"
+        className={s.cover}
+        alt="astronaut"
+      />
     </section>
   );
 }

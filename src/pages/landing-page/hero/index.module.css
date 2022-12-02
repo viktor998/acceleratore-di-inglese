@@ -47,14 +47,14 @@
   font-size: 36px;
   color: white;
   line-height: 99.5%;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 .list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: fit-content;
+  width: 400px;
   /* padding-left: 32px; */
 }
 .item {
@@ -90,8 +90,13 @@
   /* position: absolute;
   right: 0;
   top: 0; */
+  /* top: min(-15vh, -200px); */
   z-index: 3;
+  /* width: 100%; */
+  height: 100%;
   object-fit: contain;
+  position: absolute;
+  right: 0;
 }
 .astroMobile2 {
   display: none;
@@ -103,13 +108,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-left: min(32px, 4.2vw);
 }
 .contentRail {
   position: relative;
   z-index: 4;
   gap: min(80px, 10vw);
 }
-
+@media only screen and (max-width: 600px) {
+  .text-box h1 {
+    font-size: calc(24px + 1.2vw);
+  }
+}
 @media only screen and (min-width: 600px) {
   .hero .intro {
     position: relative;
@@ -225,6 +235,9 @@
   .listContainer {
     padding: 0;
   }
+  .listContainer div {
+    display: none;
+  }
   .contentRail {
     padding-bottom: 2rem;
     margin: 0 auto;
@@ -236,6 +249,9 @@
   .text-box h1 {
     font-size: 60px;
     color: white;
+  }
+  .list {
+    width: fit-content;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -260,13 +276,20 @@
     overflow-y: hidden;
   }
 }
+
 @media only screen and (max-height: 1024px) {
   .hero {
-    height: auto;
+    height: auto !important;
   }
   .contentRail {
     padding-bottom: 2rem;
     margin: 0 auto;
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .contentRail {
+    gap: 8vw;
+    /* margin-top: 4rem; */
   }
 }
