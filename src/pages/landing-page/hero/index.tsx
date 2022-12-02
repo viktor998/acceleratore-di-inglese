@@ -61,11 +61,11 @@ function Hero() {
             srcSet="/images/backgrounds/bg-intro@320.svg"
           />
           <source
-            media="(min-width:528px)"
+            media="(max-width:2618px)"
             srcSet="/images/backgrounds/bg-intro@528.svg"
           />
           <img
-            src="/images/backgrounds/bg-intro@528.svg"
+            src="/images/backgrounds/bg-intro@2618.svg"
             className={s.introBg}
             alt="astronaut"
           />
