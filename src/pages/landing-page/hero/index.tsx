@@ -45,23 +45,13 @@ function Hero() {
     // </section>
     <section className={s.hero}>
       <div className={s.intro}>
-        {/* <img
-          className={s.introBg}
-          src={"/images/backgrounds/bg-intro@1440x1091.png"}
-          srcSet={
-            "/images/backgrounds/bg-intro@390x266.png 390w, /images/backgrounds/bg-intro@1024x1091.png 1024w,/images/backgrounds/bg-intro@1440x1091.png 1550w"
-          }
-          sizes={
-            "(max-width:480px) 390px, (max-width:1024px) 1024px, (max-width:1550px) 1550px"
-          }
-        /> */}
         <picture>
           <source
             media="(max-width:528px)"
             srcSet="/images/backgrounds/bg-intro@320.svg"
           />
           <source
-            media="(max-width:2618px)"
+            media="(max-width:2370px)"
             srcSet="/images/backgrounds/bg-intro@528.svg"
           />
           <img

@@ -8,11 +8,15 @@ import Testimonies from "./testimonies";
 import Approved from "./approved";
 import QuickRegSection from "./quick-reg-section";
 import Footer from "./footer";
+import { Helmet } from "react-helmet-async";
 function LandingPage() {
   const [count, setCount] = useState(0);
 
   return (
     <div className={s.root}>
+      <Helmet>
+        <title>Welcome - Edusogno</title>
+      </Helmet>
       <Hero />
       <Statistics />
       <Testimonies />

@@ -257,7 +257,6 @@
 @media only screen and (min-width: 1280px) {
   .list {
     gap: 60px;
-    /* margin-top: 4rem; */
   }
   .hero .astroMobile2 {
     display: block;
@@ -278,15 +277,19 @@
 }
 
 @media only screen and (max-height: 1024px) {
-  .hero {
-    height: auto !important;
-  }
   .contentRail {
     padding-bottom: 2rem;
     margin: 0 auto;
     width: 100%;
   }
 }
+
+@media only screen and (min-height: 1024px) {
+  .hero {
+    height: auto !important;
+  }
+}
+
 @media only screen and (min-width: 1440px) {
   .contentRail {
     gap: 8vw;

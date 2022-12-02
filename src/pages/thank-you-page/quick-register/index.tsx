@@ -1,16 +1,16 @@
 import { useState } from "react";
 import s from "./index.module.css";
-import { TextField } from "../../TextField";
-import { TelField } from "../../TelField";
-import CheckBox from "../../checkbox";
+
 import cn from "classnames";
-import { useNavigate } from "react-router-dom";
+import CheckBox from "../../../components/checkbox";
+import { TelField } from "../../../components/TelField";
+import { TextField } from "../../../components/TextField";
 type Props = {
   className?: string;
 };
 function QuickRegister(props: Props) {
   const { className } = props;
-  const navigate = useNavigate();
+
   return (
     <form className={cn(s.root, className)}>
       <div className="flex flex-col gap-6 max-w-[579px]">
@@ -23,12 +23,7 @@ function QuickRegister(props: Props) {
             Accetto i Termini e le Condizioni della Privacy Policy
           </p>
         </div>
-        <button
-          onClick={() => {
-            navigate("/thank-you");
-          }}
-          className="btn-green btn-sm w-[265px] py-6 mx-auto"
-        >
+        <button className="btn-green btn-sm w-[265px] py-6 mx-auto">
           RICHIEDI INFO
         </button>
       </div>
