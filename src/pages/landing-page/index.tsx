@@ -17,7 +17,7 @@ function LandingPage() {
       <Statistics />
       <Testimonies />
       <Approved />
-      <QuickRegSection />
+      <QuickRegSection id={'last'} />
       <Footer />
     </div>
   );

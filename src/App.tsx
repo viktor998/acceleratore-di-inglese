@@ -11,19 +11,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/user" element={<DefaultLayout />}>
-        <Route index element={<Navigate to="agenda" replace={true} />} />
-        <Route path="agenda" element={<Agenda />} />
-        <Route
-          path="*"
-          element={
-            <div className="flex flex-col justify-center items-center h-full text-3xl">
-              Coming Soon
-            </div>
-          }
-        />
-      </Route>
+      <Route path="/landing-inglese/" element={<LandingPage />} />
     </Routes>
   );
 }

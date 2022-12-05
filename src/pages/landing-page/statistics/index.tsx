@@ -44,9 +44,9 @@ function Statistics() {
               costo del corso.
             </p>
           </div>
-          <button className="btn-green btn-sm w-[265px] py-6 mx-auto my-6 xl:my-10">
+          <a href="#last" className="btn-green btn-sm w-[265px] py-6 mx-auto my-6 xl:my-10 flex text-xl font-semibold justify-center items-center">
             RICHIEDI INFO
-          </button>
+          </a>
           {/* </div> */}
         </li>
       </ul>
