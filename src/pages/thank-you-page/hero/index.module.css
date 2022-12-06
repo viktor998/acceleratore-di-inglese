@@ -1,0 +1,136 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4vh;
+  overflow-x: hidden;
+
+  background: var(--clr-violet-200);
+  height: 100vh;
+  --intro-height: clamp();
+}
+
+.hero .introBg {
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+}
+.hero .intro {
+  position: relative;
+  height: 45%;
+}
+
+.hero .contentRail {
+  height: 65%;
+  position: relative;
+  z-index: 4;
+  gap: min(80px, 10vw);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.hero .calendarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 4vh;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: min(56px, 10vh);
+}
+.message svg {
+  margin-top: auto;
+}
+
+.message p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 123%;
+  color: #2d224c;
+}
+
+@media only screen and (max-width: 600px) {
+  .text-box h1 {
+    font-size: calc(24px + 1.2vw);
+  }
+}
+@media only screen and (min-width: 600px) {
+  .contentRail {
+    gap: 40px;
+  }
+
+  .hero .introBg {
+    width: 100%;
+    object-fit: 100%;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+  }
+  .item p {
+    text-align: start;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 99.5%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .contentRail {
+    flex-direction: row;
+    justify-content: center;
+    @apply 2xl:container;
+  }
+
+  .item {
+    width: 100%;
+  }
+  .item p {
+    font-size: 24px;
+  }
+  .item img {
+    width: 55px;
+    height: 55px;
+  }
+  .contentRail {
+    /* padding-bottom: 2rem; */
+    margin: 0 auto;
+  }
+  .text-box img {
+    width: 187px;
+    height: 80px;
+  }
+  .text-box h1 {
+    font-size: 60px;
+    color: white;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero .astroMobile2 {
+    display: block;
+  }
+  .item p {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-height: 1280px) {
+  .hero .contentRail {
+    max-height: 600px;
+  }
+}

@@ -1,3 +1,4 @@
+import moment from "moment";
 export const Months = [
   "January",
   "February",
@@ -42,27 +43,22 @@ export const renderCalendar = (date: Date): CalendarValues => {
 
   const firstDayIndex = date.getDay() - 1;
 
-  const lastDayIndex = new Date(
-    date.getFullYear(),
-    date.getMonth() + 1,
-    0
-  ).getDay();
-
-  const nextDays = 7 - lastDayIndex;
   let daysArray: Array<number> = [];
   let prevDaysArray: Array<number> = [];
-  let nextDaysArray: Array<number> = [];
   for (let x = firstDayIndex; x > 0; x--) {
     prevDaysArray.push(prevLastDay - x);
   }
-
   for (let i = 1; i <= lastDay; i++) {
     daysArray.push(i);
   }
+  let sum = daysArray.length + prevDaysArray.length;
+  let nextDaysArray: Array<number> = [];
+  const nextDays = 7 - (sum % 7);
+  console.log("nextDays", sum, daysArray, prevDaysArray, nextDays);
 
   for (let j = 1; j <= nextDays; j++) {
     let sum = nextDaysArray.length + daysArray.length + prevDaysArray.length;
-    if (sum % 7 == 0 || sum > 35) break;
+    // if (sum % 7 == 0 || sum > 35) break;
     nextDaysArray.push(j);
   }
 
@@ -73,4 +69,34 @@ export const renderCalendar = (date: Date): CalendarValues => {
     year: date.getFullYear(),
     month: date.getMonth(),
   };
+};
+
+export const getDate = (month: number, year: number): Array<string[]> => {
+  var calendar: Array<string[]> = [];
+  const startDate = moment([year, month])
+    .clone()
+    .startOf("month")
+    .startOf("isoWeek");
+  const endDate = moment([year, month]).clone().endOf("month");
+  const day = startDate.clone().subtract(1, "day");
+
+  while (day.isBefore(endDate, "day")) {
+    calendar.push(
+      Array(7)
+        .fill(0)
+        .map(() => day.add(1, "day").clone().format("DD"))
+    );
+  }
+  return calendar;
+};
+export const isExtraDays = (week, date) => {
+  if (week === 0 && date > 10) {
+    return true;
+  } else if (week === 5 && date < 10) {
+    return true;
+  } else if (week === 4 && date < 10) {
+    return true;
+  } else {
+    return false;
+  }
 };

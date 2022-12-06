@@ -61,10 +61,7 @@ const SplideVideo = ({ item, autoplay }: Props) => {
     })
 
     if (video.paused) {
-      console.log('NOT PAUSED')
       await pauseAll();
-
-      console.log('PAUSED')
     }
 
     video?.paused ? (video?.play(), video?.classList.remove("hidden"), poster?.classList.add("hidden"), autoplay(false), setPlaying(true)) : (video?.pause(), video?.classList.add("hidden"), poster?.classList.remove("hidden"), autoplay(true), setPlaying(false))
@@ -74,7 +71,7 @@ const SplideVideo = ({ item, autoplay }: Props) => {
   return (
     <div className={s.splide + ' video-box relative'} onClick={startPlay}>
       {
-        !playing ? <PlayArrowRoundedIcon className="absolute " sx={{ fontSize: '100px' }} /> : null
+        !playing ? <PlayArrowRoundedIcon className="absolute text-white" sx={{ fontSize: '100px' }} /> : null
       }
       <img src={`https://edusogno.com/video/Inglese/${item.poster}`} />
       <video className={

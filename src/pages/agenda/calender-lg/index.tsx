@@ -1,23 +1,56 @@
+import { Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import FormControl from "@mui/material/FormControl";
+import MenuItem from "@mui/material/MenuItem";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 import cn from "classnames";
 import moment, { Moment } from "moment";
 import { ReactNode, useEffect, useState } from "react";
+import * as React from "react";
 
-import { uuid } from "../../utils/Utils";
-import Event, { EventProps } from "../event";
-import { CaChevronLeft, CaChevronRight } from "../Icons";
-import Select from "../select";
+import { CaChevronLeft, CaChevronRight } from "../../../components/Icons";
+import { uuid } from "../../../utils/Utils";
+import Event, { EventProps } from "./event";
 import { CalendarValues, Days, Months, renderCalendar } from "./index.logic";
 import s from "./index.module.css";
 import Modal from "./modal";
 
+export function TimeZoneSelect() {
+  const [timeZone, setTimeZone] = React.useState("GMT+01:00");
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setTimeZone(event.target.value as string);
+  };
+
+  return (
+    <Box sx={{ minWidth: 164 }}>
+      <FormControl fullWidth size="small" classes={{ root: s.muiSelectRoot }}>
+        {/* <InputLabel
+          color="secondary"
+          id="demo-simple-select-label"
+        ></InputLabel> */}
+        <Select
+          classes={{ nativeInput: s.nativeInput, outlined: s.muiOutlined }}
+          value={timeZone}
+          onChange={handleChange}
+        >
+          <MenuItem value={"GMT+01:00"}>GMT+01:00</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+  );
+}
 type DateItemType = {
   value: Moment;
+  showMonth?: boolean;
   type: "past" | "now" | "future";
   setOpenModal: Function;
   requestClose: Function;
 };
 const DateItem = (props: DateItemType) => {
-  const { value, type, setOpenModal, requestClose } = props;
+  const { value, type, showMonth = false, setOpenModal, requestClose } = props;
   const event: EventProps = {
     title: "Speaking Class",
     topic: "",
@@ -27,7 +60,7 @@ const DateItem = (props: DateItemType) => {
   const [events, setEvents] = useState<Array<EventProps>>([]);
 
   const addEvent = () => {
-    events.length < 1 && setEvents((r) => [...r, event]);
+    events.length < 2 && setEvents((r) => [...r, event]);
     // console.log(events);
   };
 
@@ -48,7 +81,7 @@ const DateItem = (props: DateItemType) => {
         >
           <p className={s.day}>
             {value.date()}
-            {value.date() === 1 && (
+            {(value.date() === 1 || showMonth) && (
               <>&nbsp;{Months[value.month()].slice(0, 3)}</>
             )}
           </p>
@@ -68,7 +101,7 @@ const DateItem = (props: DateItemType) => {
     );
   return <></>;
 };
-function Calender() {
+function CalenderLg() {
   const [date, setDate] = useState<Date>(new Date());
   const options = [
     { value: "chocolate", label: "Chocolate" },
@@ -131,15 +164,22 @@ function Calender() {
             <button onClick={() => previous()}>
               <CaChevronLeft />
             </button>
+
             <button onClick={() => next()}>
               <CaChevronRight />
             </button>
           </div>
           <div className={s.options}>
-            <button onClick={() => today()} className="btn-violet btn-sm">
+            <Button
+              onClick={() => today()}
+              className={"!px-6 !capitalize !text-[20px] !font-[500]"}
+              color="error"
+              size="small"
+              variant="contained"
+            >
               Today
-            </button>
-            <Select />
+            </Button>
+            <TimeZoneSelect />
           </div>
         </div>
         <div className={s.daysLabels}>
@@ -148,19 +188,37 @@ function Calender() {
           ))}
         </div>
         <div className={s.daysGrid}>
-          {calendarValues.prevDaysArray.map((i) => (
-            <DateItem
-              key={uuid()}
-              setOpenModal={handleModalOpen}
-              requestClose={() => setOpenModal(false)}
-              value={moment({
-                day: i,
-                month: calendarValues.month - 1,
-                year: calendarValues.year,
-              })}
-              type="past"
-            />
-          ))}
+          {calendarValues.prevDaysArray.map((i, index) => {
+            if (calendarValues.month - 1 < 0)
+              return (
+                <DateItem
+                  key={uuid()}
+                  setOpenModal={handleModalOpen}
+                  requestClose={() => setOpenModal(false)}
+                  showMonth={index === 0}
+                  value={moment({
+                    day: i,
+                    month: 11,
+                    year: calendarValues.year - 1,
+                  })}
+                  type="past"
+                />
+              );
+            return (
+              <DateItem
+                key={uuid()}
+                setOpenModal={handleModalOpen}
+                requestClose={() => setOpenModal(false)}
+                showMonth={index === 0}
+                value={moment({
+                  day: i,
+                  month: calendarValues.month - 1,
+                  year: calendarValues.year,
+                })}
+                type="past"
+              />
+            );
+          })}
           {calendarValues.daysArray.map((i) => (
             <DateItem
               key={uuid()}
@@ -174,23 +232,39 @@ function Calender() {
               type="now"
             />
           ))}
-          {calendarValues.nextDaysArray.map((i) => (
-            <DateItem
-              key={uuid()}
-              setOpenModal={handleModalOpen}
-              requestClose={() => setOpenModal(false)}
-              value={moment({
-                day: i,
-                month: calendarValues.month + 1,
-                year: calendarValues.year,
-              })}
-              type="future"
-            />
-          ))}
+          {calendarValues.nextDaysArray.map((i) => {
+            if (calendarValues.month + 1 > 11)
+              return (
+                <DateItem
+                  key={uuid()}
+                  setOpenModal={handleModalOpen}
+                  requestClose={() => setOpenModal(false)}
+                  value={moment({
+                    day: i,
+                    month: 0,
+                    year: calendarValues.year + 1,
+                  })}
+                  type="future"
+                />
+              );
+            return (
+              <DateItem
+                key={uuid()}
+                setOpenModal={handleModalOpen}
+                requestClose={() => setOpenModal(false)}
+                value={moment({
+                  day: i,
+                  month: calendarValues.month + 1,
+                  year: calendarValues.year,
+                })}
+                type="future"
+              />
+            );
+          })}
         </div>
       </div>
     </>
   );
 }
 
-export default Calender;
+export default CalenderLg;

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   padding-inline: 24px;
-  @apply px-2 md:px-6;
+  @apply px-2 md:px-6 pt-4;
   height: 100%;
   background: white;
   flex: 1 1 15%;
@@ -19,8 +19,8 @@
   line-height: 99.5%;
   color: #d4145a;
   text-transform: uppercase;
-  margin-top: min(73px, 15%);
-  margin-bottom: min(22px, 15%);
+  margin-top: min(63px, 15%);
+  margin-bottom: min(12px, 15%);
   /* @apply hidden md:block; */
 }
 .item {
@@ -51,9 +51,54 @@
   line-height: 99.5%;
   color: currentColor;
   text-transform: capitalize;
-  @apply hidden md:block;
 }
 .signOut {
   margin-top: auto;
   margin-bottom: 15%;
+}
+.button {
+  margin-left: auto;
+  display: none;
+}
+
+@media only screen and (max-width: 763px) {
+  .root {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    align-items: center;
+    padding: 6vh min(5vw, 60px);
+    max-width: 0;
+    transform: scaleX(0);
+    transition: all 200ms;
+    transform-origin: left;
+  }
+  .root.active {
+    max-width: 100%;
+    transform: scaleX(1);
+  }
+  .root li {
+    width: 60%;
+  }
+  .label,
+  .item p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: 20px;
+    line-height: 99.5%;
+  }
+  .button {
+    margin-left: auto;
+    display: block;
+  }
+  .label {
+    text-align: center;
+    /* font-family: 'Poppins';
+font-style: normal; */
+    font-weight: 600;
+  }
+  .item p {
+    font-weight: 400;
+  }
 }
