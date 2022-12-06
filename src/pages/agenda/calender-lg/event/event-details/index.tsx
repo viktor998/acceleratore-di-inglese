@@ -1,11 +1,10 @@
 import { duration, Moment } from "moment";
 import { ReactNode, useState } from "react";
-// import { Months, renderCalendar } from "./index.logic";
+import { uuid } from "../../../../../utils/Utils";
+
 import s from "./index.module.css";
-import moment from "moment";
-import cn from "classnames";
-import RNModal from "react-modal";
-import { uuid } from "../../../utils/Utils";
+
+// import { Months, renderCalendar } from "./index.logic";
 
 export type EventProps = {
   isPast: boolean;
