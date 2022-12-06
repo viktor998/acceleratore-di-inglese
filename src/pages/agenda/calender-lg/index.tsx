@@ -1,18 +1,47 @@
-import { Button, Select } from "@mui/material";
+import { Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import FormControl from "@mui/material/FormControl";
+import MenuItem from "@mui/material/MenuItem";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 import cn from "classnames";
 import moment, { Moment } from "moment";
 import { ReactNode, useEffect, useState } from "react";
-import { uuid } from "../../../utils/Utils";
+import * as React from "react";
 
-// import { uuid } from "../../utils/Utils";
-import Event, { EventProps } from "./event";
 import { CaChevronLeft, CaChevronRight } from "../../../components/Icons";
-// import { CaChevronLeft, CaChevronRight } from "../Icons";
-// import Select from "../select";
+import { uuid } from "../../../utils/Utils";
+import Event, { EventProps } from "./event";
 import { CalendarValues, Days, Months, renderCalendar } from "./index.logic";
 import s from "./index.module.css";
 import Modal from "./modal";
 
+export function TimeZoneSelect() {
+  const [timeZone, setTimeZone] = React.useState("GMT+01:00");
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setTimeZone(event.target.value as string);
+  };
+
+  return (
+    <Box sx={{ minWidth: 164 }}>
+      <FormControl fullWidth size="small" classes={{ root: s.muiSelectRoot }}>
+        {/* <InputLabel
+          color="secondary"
+          id="demo-simple-select-label"
+        ></InputLabel> */}
+        <Select
+          classes={{ nativeInput: s.nativeInput, outlined: s.muiOutlined }}
+          value={timeZone}
+          onChange={handleChange}
+        >
+          <MenuItem value={"GMT+01:00"}>GMT+01:00</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+  );
+}
 type DateItemType = {
   value: Moment;
   showMonth?: boolean;
@@ -143,15 +172,14 @@ function CalenderLg() {
           <div className={s.options}>
             <Button
               onClick={() => today()}
-              className={"!px-6 !py-0 !capitalize !text-[20px] !font-[500]"}
+              className={"!px-6 !capitalize !text-[20px] !font-[500]"}
               color="error"
+              size="small"
               variant="contained"
             >
               Today
             </Button>
-            {/* <button onClick={() => today()} className="btn-violet btn-sm">
-              Today
-            </button> */}
+            <TimeZoneSelect />
           </div>
         </div>
         <div className={s.daysLabels}>

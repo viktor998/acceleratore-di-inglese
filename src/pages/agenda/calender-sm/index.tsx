@@ -94,25 +94,12 @@ function Calender() {
     }
     return date;
   };
-  const next = () => {
-    console.log("click");
-    setDate(addMonth(date, 1));
-    setCalendarValues(renderCalendar(date));
-  };
 
-  const previous = () => {
-    setDate(addMonth(date, -1));
-    setCalendarValues(renderCalendar(date));
-  };
   const today = () => {
     setDate(new Date());
     setCalendarValues(renderCalendar(new Date()));
   };
 
-  const handleModalOpen = (content: ReactNode) => {
-    setModalContent(content);
-    setOpenModal(true);
-  };
   return (
     <>
       <div className={s.root}>
@@ -150,7 +137,7 @@ function Calender() {
                 return (
                   <DateItem
                     key={uuid()}
-                    setOpenModal={handleModalOpen}
+                    setOpenModal={() => {}}
                     requestClose={() => setOpenModal(false)}
                     showMonth={index === 0}
                     value={moment({
@@ -164,7 +151,7 @@ function Calender() {
               return (
                 <DateItem
                   key={uuid()}
-                  setOpenModal={handleModalOpen}
+                  setOpenModal={() => {}}
                   requestClose={() => setOpenModal(false)}
                   showMonth={index === 0}
                   value={moment({
@@ -179,7 +166,7 @@ function Calender() {
             {calendarValues.daysArray.map((i) => (
               <DateItem
                 key={uuid()}
-                setOpenModal={handleModalOpen}
+                setOpenModal={() => {}}
                 requestClose={() => setOpenModal(false)}
                 value={moment({
                   day: i,
@@ -194,7 +181,7 @@ function Calender() {
                 return (
                   <DateItem
                     key={uuid()}
-                    setOpenModal={handleModalOpen}
+                    setOpenModal={() => {}}
                     requestClose={() => setOpenModal(false)}
                     value={moment({
                       day: i,
@@ -207,7 +194,7 @@ function Calender() {
               return (
                 <DateItem
                   key={uuid()}
-                  setOpenModal={handleModalOpen}
+                  setOpenModal={() => {}}
                   requestClose={() => setOpenModal(false)}
                   value={moment({
                     day: i,
