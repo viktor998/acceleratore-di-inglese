@@ -1,4 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+html{scroll-behavior:smooth}
+
 :root {
   font-family: Poppins, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -50,7 +52,7 @@ body {
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom: 1px solid var(--clr-violet-300);
+    border-bottom: 1px solid rgb(45, 34, 76);
     padding-bottom: 4px;
     padding-left: 4px;
     width: 100%;
@@ -66,11 +68,23 @@ body {
   .textfield-standard::placeholder {
     font-family: "Poppins";
     font-style: normal;
-    font-weight: 200;
+    font-weight: 400;
     max-width: 573px;
     font-size: 32px;
-    color: var(--clr-violet-300);
+    color: rgb(45, 34, 76);
     @apply text-2xl lg:text-[32px];
+  }
+
+  .textfield-standard::placeholder {
+    color:  rgba(0, 0, 0, 0.42) !important;
+  }
+
+  .textfield-error{
+    color: #d4145a !important;
+  }
+
+  .select-standard.error, .select-standard.error option, .textfield-standard.error{
+    border-bottom: 1px solid #d4145a;
   }
   .tel {
     background-color: none;

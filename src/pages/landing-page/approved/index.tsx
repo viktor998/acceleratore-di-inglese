@@ -10,6 +10,9 @@ import {
 
 import s from "./index.module.css";
 import cn from "classnames";
+
+import mainItem from '../../../assets/images/backgrounds/main-item@1440px.png'
+
 function Approved() {
   const [count, setCount] = useState(0);
 
@@ -18,14 +21,14 @@ function Approved() {
       <div className={s.itemsContainer}>
         <img
           className={s.img}
-          src={"/images/backgrounds/main-item@1440px.png"}
+          src={mainItem}
         />
         <ul className={s.list}>
-          <p className={s.heading}>Come funziona il percorso?</p>
+          <p className={s.heading + ' mb-10'}>Come funziona il percorso?</p>
           <li className={s.bar}>
             <CaStar />
             <p>
-              Lezioni online e<br />
+              Lezioni online e <br />
               orari a tua scelta
             </p>
           </li>
@@ -52,8 +55,7 @@ function Approved() {
           <li className={s.bar}>
             <CaStar />
             <p>
-              Tutor madrelingua
-              <br />
+              Tutor madrelingua <br />
               inglesi certificati
             </p>
           </li>

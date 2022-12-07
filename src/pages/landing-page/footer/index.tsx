@@ -1,18 +1,12 @@
 import { useState } from "react";
-import QuickRegister from "../../../components/forms/quick-register";
 import {
-  CaBritCouncil,
-  CaStar,
-  CaCambridgeAssessment,
-  CaMinistryOfEducation,
-  CaIelts,
   CaFacebook,
   CaInstagram,
   CaLinkedIn,
   CaYoutube,
   CaTiktok,
 } from "../../../components/Icons";
-
+import logo from '../../../assets/images/logos/hero-logo.png'
 import s from "./index.module.css";
 import cn from "classnames";
 function Footer() {
@@ -26,22 +20,22 @@ function Footer() {
             <img
               alt={"logo"}
               className={s.image}
-              src={"/images/logos/hero-logo.png"}
+              src={logo}
             />
             <div className="flex flex-row gap-[2px]">
-              <a href="/#">
+              <a target={'_blank'} href="https://www.facebook.com/edusogno">
                 <CaFacebook />
               </a>
-              <a href="/#">
+              <a target={'_blank'} href="https://www.instagram.com/edu.sogno/">
                 <CaInstagram />
               </a>
-              <a href="/#">
+              <a target={'_blank'} href="https://www.linkedin.com/company/28861904/admin/">
                 <CaLinkedIn />
               </a>
-              <a href="/#">
+              <a target={'_blank'} href="https://www.youtube.com/@edusognotutoring2258">
                 <CaYoutube />
               </a>
-              <a href="/#">
+              <a target={'_blank'} href="https://www.tiktok.com/@edu.sogno">
                 <CaTiktok />
               </a>
             </div>
@@ -49,17 +43,17 @@ function Footer() {
           <p className={s.otherInformation}>
             www.edusogno.com - Realizzato con il 🧠 in 🇮🇹
           </p>
-          <p className={s.copyright}>
+          <div className={s.copyright + ' flex items-center justify-center'}>
             <p>Copyright © 2022 Edusogno. Tutti i diritti riservati.</p>
 
             <p>
-              |&nbsp;<a href="/#">Privacy Policy</a>&nbsp;|&nbsp;
+              |&nbsp;<a target={'_blank'} href="https://www.iubenda.com/privacy-policy/22694950">Privacy Policy</a>&nbsp;|&nbsp;
             </p>
             <p>
-              <a href="/#">Cookie Policy</a>&nbsp;|
+              <a target={'_blank'} href="https://www.iubenda.com/privacy-policy/22694950/cookie-policy?an=no&s_ck=false&newmarkup=yes&ifr=true&height=650">Cookie Policy</a>&nbsp;|
             </p>
             <p>P.IVA 08587960728</p>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

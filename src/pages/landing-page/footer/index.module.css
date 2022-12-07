@@ -8,7 +8,7 @@
   /* padding-inline: 32px; */
   padding-top: 83px;
   padding-bottom: 58px;
-  background: url("/images/backgrounds/bg-footer@390x318.png");
+  background: url("../../../assets/images/backgrounds/bg-footer@390x318.png");
   /* background: #d9daf3; */
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,7 +63,7 @@
     background-repeat: no-repeat !important;
     padding-bottom: 36px;
     background-size: cover !important;
-    background: url("/images/backgrounds/bg-footer@1440x316.svg");
+    background: url("../../../assets/images/backgrounds/bg-footer@1440x316.svg");
   }
   .root {
     background: none;

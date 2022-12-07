@@ -25,28 +25,9 @@ function App() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/thank-you" element={<ThankYouPage />} />
-
-        <Route path="/user" element={<DefaultLayout />}>
-          <Route index element={<Navigate to="agenda" replace={true} />} />
-          <Route path="agenda" element={<Agenda />}>
-            <Route index element={<Main />} />
-            <Route path="event" element={<EventDetails />} />
-          </Route>
-          <Route
-            path="*"
-            element={
-              <div className="flex flex-col justify-center items-center h-full text-3xl">
-                Coming Soon
-              </div>
-            }
-          />
-        </Route>
-      </Routes>
-    </ThemeProvider>
+    <Routes>
+      <Route path="/landing-inglese/" element={<LandingPage />} />
+    </Routes>
   );
 }
 
