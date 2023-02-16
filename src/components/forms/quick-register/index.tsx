@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import s from "./index.module.css";
 import cn from "classnames";
 import axios from "axios";
@@ -67,6 +67,7 @@ function QuickRegister(props: Props) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const [generalError, setGeneralError] = useState<boolean | string>(false)
+  const [link, setLink] = useState<string>('');
 
   const inputStyle = {
     '& .MuiInputBase-root': {
@@ -74,6 +75,10 @@ function QuickRegister(props: Props) {
 
     },
   }
+
+  React.useEffect(() => {
+    setLink('https://edusogno.com/form/edusogno-inglese' + window.location.search)
+  }, [])
 
   const handleChange = (e: any) => {
     // console.log(selectRef.current?.value)
@@ -210,7 +215,11 @@ function QuickRegister(props: Props) {
 
   return (
     <ThemeProvider theme={theme}>
-      <form className={cn(s.root, className)} onSubmit={submitForm}>
+      <Box className={cn(s.root, className)}
+        component="a"
+        href={link}
+      // onSubmit={submitForm}
+      >
         <div className="flex flex-col gap-4 max-w-[579px]">
 
           <Box className="flex gap-x-3">
@@ -318,7 +327,7 @@ function QuickRegister(props: Props) {
         </div>
 
 
-      </form>
+      </Box>
     </ThemeProvider>
 
   );
