@@ -68,6 +68,13 @@ function QuickRegister(props: Props) {
 
   const [generalError, setGeneralError] = useState<boolean | string>(false)
 
+  const inputStyle = {
+    '& .MuiInputBase-root': {
+      fontSize: '28px',
+
+    },
+  }
+
   const handleChange = (e: any) => {
     // console.log(selectRef.current?.value)
 
@@ -206,37 +213,39 @@ function QuickRegister(props: Props) {
       <form className={cn(s.root, className)} onSubmit={submitForm}>
         <div className="flex flex-col gap-4 max-w-[579px]">
 
-          <FormControl variant="standard">
-            <div
-              className={
-                "text-4xl label md:text-xl lg:text-2xl "
-              }
-            >
+          <Box className="flex gap-x-3">
+            <FormControl variant="standard">
+              <div
+                className={
+                  "text-4xl label md:text-xl lg:text-2xl "
+                }
+              >
 
-              Il tuo nome
-            </div>
-            <TextField name={'name'} placeholder={'Nome'} variant='standard' value={data?.name ?? ''} error={error.name} onChange={handleChange} />
-            <FormHelperText sx={{ mb: 3 }}>
-              {error?.name == true ? 'Il nome è richiesto' : null}
-            </FormHelperText>
+                Nome
+              </div>
+              <TextField sx={inputStyle} name={'name'} placeholder={'Mario'} variant='standard' value={data?.name ?? ''} error={error.name} onChange={handleChange} />
+              <FormHelperText sx={{ mb: 3 }}>
+                {error?.name == true ? 'Il nome è richiesto' : null}
+              </FormHelperText>
 
-          </FormControl>
+            </FormControl>
 
-          <FormControl variant="standard">
-            <div
-              className={
-                "text-4xl label md:text-xl lg:text-2xl "
-              }
-            >
+            <FormControl variant="standard">
+              <div
+                className={
+                  "text-4xl label md:text-xl lg:text-2xl "
+                }
+              >
 
-              Il tuo cognome
-            </div>
-            <TextField error={error?.lname == true} name={'lname'} placeholder={'Cognome'} variant='standard' value={data?.lname ?? ''} onChange={handleChange} />
-            <FormHelperText sx={{ mb: 3 }}>
-              {error?.lname == true ? 'Il nome è richiesto' : null}
-            </FormHelperText>
+                Cognome
+              </div>
+              <TextField sx={inputStyle} error={error?.lname == true} name={'lname'} placeholder={'Rossi'} variant='standard' value={data?.lname ?? ''} onChange={handleChange} />
+              <FormHelperText sx={{ mb: 3 }}>
+                {error?.lname == true ? 'Il nome è richiesto' : null}
+              </FormHelperText>
 
-          </FormControl>
+            </FormControl>
+          </Box>
 
           <FormControl variant="standard">
             <div
@@ -248,6 +257,7 @@ function QuickRegister(props: Props) {
               Telefono
             </div>
             <MuiTelInput
+              sx={inputStyle}
               disableFormatting={false}
               value={data?.phone ?? ''}
               defaultCountry="IT"
@@ -273,7 +283,7 @@ function QuickRegister(props: Props) {
             >
               Email
             </div>
-            <TextField error={error?.email == true} name={'email'} placeholder={'mariorossi@email.com'} variant='standard' value={data?.email ?? ''} onChange={handleChange} />
+            <TextField sx={inputStyle} error={error?.email == true} name={'email'} placeholder={'mariorossi@email.com'} variant='standard' value={data?.email ?? ''} onChange={handleChange} />
             <FormHelperText sx={{ mb: 3 }}>
               {error?.email == true ? 'Email non valida' : null}
             </FormHelperText>

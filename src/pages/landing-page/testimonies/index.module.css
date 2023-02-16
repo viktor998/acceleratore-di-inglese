@@ -51,9 +51,16 @@
   margin-bottom: 30px;
 }
 .svgContainer {
-  padding-inline: min(32px, 2vw);
-
-  @apply flex flex-row flex-wrap gap-6 justify-center mt-10 container mx-auto;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  /* @apply flex flex-row flex-wrap gap-6 justify-center mt-10 container mx-auto; */
 }
 .svgContainer svg {
   height: 30px;

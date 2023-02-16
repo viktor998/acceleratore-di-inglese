@@ -271,7 +271,7 @@
 
 @media only screen and (min-height: 900px) {
   .hero {
-    height: 100vh;
+    /* height: 100vh; */
     overflow-y: hidden;
   }
 }

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import QuickRegister from "../../../components/forms/quick-register";
 
 import s from "./index.module.css";
@@ -14,7 +13,6 @@ import notepad from '../../../assets/icons/notepad.png'
 import snap from '../../../assets/icons/snap.png'
 
 function Hero() {
-  const [count, setCount] = useState(0);
 
   return (
     <section className={s.hero}>

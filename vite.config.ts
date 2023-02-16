@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:'/landing-inglese/',
+  server: {
+    port: 3003,
+  },
+  base:'/acceleratore-di-inglese/',
   plugins: [react()]
 })
