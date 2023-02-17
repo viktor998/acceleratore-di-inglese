@@ -7,15 +7,9 @@ import ProfessionalLandingPage from "./pages/professional-landing-page/index";
 function App() {
   return (
     <Routes>
-      <Route path="/acceleratore-di-inglese/" element={<LandingPage />} />
-      <Route
-        path="/acceleratore-di-inglese/alien"
-        element={<AlienLandingPage />}
-      />
-      <Route
-        path="/acceleratore-di-inglese/professional"
-        element={<ProfessionalLandingPage />}
-      />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/alien" element={<AlienLandingPage />} />
+      <Route path="/professional" element={<ProfessionalLandingPage />} />
     </Routes>
   );
 }
