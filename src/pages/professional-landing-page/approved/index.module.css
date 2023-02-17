@@ -1,0 +1,123 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  /* padding-inline: 32px; */
+  padding-top: 24px;
+  @apply container mx-auto pb-[64px];
+}
+.heading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 99.5%;
+  color: var(--clr-violet-100);
+  text-align: center;
+}
+.list {
+  flex-direction: column;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+.bar {
+  background: var(--clr-violet-200);
+  border-radius: 9px;
+  /* display: grid;
+  grid-template-columns: 1.2fr 6fr; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 27px;
+  padding: 22px 30px;
+  width: 100%;
+  max-width: 450px;
+}
+.bar p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 99.5%;
+  color: #2d224c;
+}
+.bar svg {
+  color: #8065c9;
+}
+
+.list li:last-of-type {
+  background: var(--clr-green-100);
+}
+.list li:last-of-type svg {
+  color: var(--clr-violet-100);
+}
+.approvedBy {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 99.5%;
+  text-align: center;
+  color: #2d224c;
+}
+.svgContainer {
+  @apply grid  grid-cols-2 lg:grid-cols-4 items-center gap-8 w-[95%] mx-auto;
+}
+.svgContainer svg {
+  height: 33px;
+  width: 100%;
+}
+.itemsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.itemsContainer .list {
+  height: fit-content;
+  width: 100%;
+}
+.img {
+  display: none;
+}
+@media only screen and (min-width: 900px) {
+  .svgContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .svgContainer svg {
+    height: 65px;
+    width: unset;
+  }
+  .bar br {
+    display: none;
+  }
+  .img {
+    height: 788px;
+    width: 386.12px;
+    display: block;
+  }
+  .itemsContainer {
+    height: 788px;
+  }
+  .list {
+    margin-top: auto;
+    flex: 1 1 70%;
+    align-items: flex-start;
+  }
+  .list .bar {
+    max-width: unset;
+  }
+  .list .bar p {
+    font-weight: 600;
+    font-size: 36px;
+  }
+  .heading {
+    font-size: 36px;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+}

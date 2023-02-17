@@ -1,0 +1,300 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4vh;
+  overflow-x: hidden;
+  padding-bottom: 4vh;
+}
+.hero .introBg {
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+}
+.hero .intro {
+  position: relative;
+  height: 35vh;
+  min-height: 246px;
+  /* background: #2d224c; */
+  /* border-radius: 70% 47% 67% 63% / 9% 0% 100% 54% ; */
+  /* display: flex; */
+}
+.intro .text-box {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 29px;
+}
+.text-box img {
+  width: 100px;
+  height: 34px;
+  object-fit: contain;
+  object-position: center;
+}
+.text-box h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  color: white;
+  line-height: 99.5%;
+  font-weight: 500;
+  text-align: center;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 400px;
+  /* padding-left: 32px; */
+}
+.item {
+  /* display: grid;
+  grid-template-columns: 1fr 6fr; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  /* width: 60%; */
+}
+.item p {
+  text-align: start;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 99.5%;
+  color: var(--clr-violet-100);
+}
+.item img {
+  height: 36px;
+}
+.item b {
+  color: var(--clr-violet-100);
+  font-weight: 600;
+}
+.form {
+  padding: 36px min(32px, 6vw);
+  background: #d9daf3;
+}
+.astroMobile1 {
+  /* position: absolute;
+  right: 0;
+  top: 0; */
+  /* top: min(-15vh, -200px); */
+  z-index: 3;
+  /* width: 100%; */
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  right: 0;
+}
+.astroMobile2 {
+  display: none;
+  position: absolute;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: min(32px, 4.2vw);
+}
+.contentRail {
+  position: relative;
+  z-index: 4;
+  gap: min(80px, 10vw);
+}
+@media only screen and (max-width: 600px) {
+  .text-box h1 {
+    font-size: calc(24px + 1.2vw);
+  }
+}
+@media only screen and (min-width: 600px) {
+  .hero .intro {
+    position: relative;
+    aspect-ratio: 1024 / 360;
+    height: auto;
+    max-height: 260px;
+    /* display: flex; */
+  }
+  .contentRail {
+    gap: 40px;
+  }
+
+  .form {
+    background: #d9daf3;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+  }
+  .form .quickReg {
+    max-width: 454px;
+  }
+  .astroMobile1,
+  .astroMobile2 {
+    z-index: 3;
+    height: 100%;
+  }
+}
+.contentRail {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media only screen and (min-width: 600px) {
+  .hero .introBg {
+    width: 100%;
+    object-fit: 100%;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+  }
+  .item p {
+    text-align: start;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 99.5%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .astroMobile1 {
+    display: none;
+  }
+  .hero .astroMobile2 {
+    display: block;
+    top: min(10vh, 108px);
+    left: 0;
+    right: unset;
+    /* width: 675px; */
+    min-height: 400px;
+    height: 42vh;
+    max-height: 675px;
+    /* transform: scale(0.7); */
+  }
+  .form {
+    background: none;
+  }
+
+  .contentRail {
+    flex-direction: row;
+    justify-content: center;
+    @apply xl:container;
+  }
+  .contentRail .listContainer {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentRail .form {
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item {
+    width: 100%;
+  }
+  .item p {
+    font-size: 24px;
+  }
+  .item img {
+    width: 55px;
+    height: 55px;
+  }
+  .hero .intro {
+    min-height: 342px;
+    height: min(35vh, 671px);
+    max-height: unset;
+  }
+  .hero {
+    height: auto;
+  }
+  .form {
+    padding: 0;
+  }
+  .listContainer {
+    padding: 0;
+  }
+  .listContainer div {
+    display: none;
+  }
+  .contentRail {
+    padding-bottom: 2rem;
+    margin: 0 auto;
+  }
+  .text-box img {
+    width: 187px;
+    height: 80px;
+  }
+  .text-box h1 {
+    font-size: 60px;
+    color: white;
+  }
+  .list {
+    width: fit-content;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .list {
+    gap: 60px;
+  }
+  .hero .astroMobile2 {
+    display: block;
+  }
+  .item p {
+    font-size: 32px;
+  }
+  .form .quickReg {
+    max-width: 573px;
+  }
+}
+
+@media only screen and (min-height: 900px) {
+  .hero {
+    /* height: 100vh; */
+    overflow-y: hidden;
+  }
+}
+
+@media only screen and (max-height: 1024px) {
+  .contentRail {
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-height: 1024px) {
+  .hero {
+    height: auto !important;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .contentRail {
+    gap: 8vw;
+    /* margin-top: 4rem; */
+  }
+}

@@ -2,41 +2,27 @@ import QuickRegister from "../../../components/forms/quick-register";
 
 import s from "./index.module.css";
 import cn from "classnames";
-import bgIntro320 from '../../../assets/images/backgrounds/bg-intro@320.svg'
-import bgIntro528 from '../../../assets/images/backgrounds/bg-intro@528.svg'
-import bgIntro2618 from '../../../assets/images/backgrounds/bg-intro@2618.svg'
-import asFix from '../../../assets/images/backgrounds/as-fix.svg'
-import heroLogo from '../../../assets/images/logos/hero-logo.png'
-import bgAstro from '../../../assets/images/backgrounds/bg-astro@1440px.png'
-import brit from '../../../assets/icons/brit.png'
-import notepad from '../../../assets/icons/notepad.png'
-import snap from '../../../assets/icons/snap.png'
+import bgIntro320 from "../../../assets/images/backgrounds/bg-intro@320.svg";
+import bgIntro528 from "../../../assets/images/backgrounds/bg-intro@528.svg";
+import bgIntro2618 from "../../../assets/images/backgrounds/bg-intro@2618.svg";
+import asFix from "../../../assets/images/backgrounds/as-fix.svg";
+import heroLogo from "../../../assets/images/logos/hero-logo.svg";
+import bgAstro from "../../../assets/images/backgrounds/bg-astro@1440px.png";
+import brit from "../../../assets/icons/brit.png";
+import notepad from "../../../assets/icons/notepad.png";
+import snap from "../../../assets/icons/snap.png";
 
 function Hero() {
-
   return (
     <section className={s.hero}>
       <div className={s.intro}>
         <picture>
-          <source
-            media="(max-width:528px)"
-            srcSet={bgIntro320}
-          />
-          <source
-            media="(max-width:2618px)"
-            srcSet={bgIntro528}
-          />
-          <img
-            src={bgIntro2618}
-            className={s.introBg}
-            alt="astronaut"
-          />
+          <source media="(max-width:528px)" srcSet={bgIntro320} />
+          <source media="(max-width:10618px)" srcSet={bgIntro528} />
+          <img src={bgIntro2618} className={s.introBg} alt="astronaut" />
         </picture>
 
-        <img
-          className={s.astroMobile2}
-          src={bgAstro}
-        />
+        <img className={s.astroMobile2} src={bgAstro} />
         <div className={s["text-box"]}>
           <img alt={"logo"} src={heroLogo} />
           <h1>
@@ -73,23 +59,10 @@ function Hero() {
           </ul>
           <div className="flex flex-direction w-full relative h-[236px]">
             <picture>
-              <source
-                media="(max-width:360px)"
-                srcSet={asFix}
-              />
-              <source
-                media="(max-width:480px)"
-                srcSet={asFix}
-              />
-              <source
-                media="(max-width:1024px)"
-                srcSet={asFix}
-              />
-              <img
-                src={asFix}
-                className={s.astroMobile1}
-                alt="astronaut"
-              />
+              <source media="(max-width:360px)" srcSet={asFix} />
+              <source media="(max-width:480px)" srcSet={asFix} />
+              <source media="(max-width:1024px)" srcSet={asFix} />
+              <img src={asFix} className={s.astroMobile1} alt="astronaut" />
             </picture>
           </div>
         </div>
