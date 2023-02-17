@@ -87,13 +87,12 @@
   background: #d9daf3;
 }
 .astroMobile1 {
-  /* position: absolute;
-  right: 0;
-  top: 0; */
+  position: absolute;
+  top: 0;
   /* top: min(-15vh, -200px); */
   z-index: 3;
   /* width: 100%; */
-  height: 100%;
+  height: 100vh;
   object-fit: contain;
   position: absolute;
   right: 0;

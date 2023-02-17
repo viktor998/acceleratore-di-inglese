@@ -99,6 +99,9 @@
     height: 788px;
     width: 386.12px;
     display: block;
+    object-fit: contain;
+    object-position: right;
+    margin-right: 10px;
   }
   .itemsContainer {
     height: 788px;

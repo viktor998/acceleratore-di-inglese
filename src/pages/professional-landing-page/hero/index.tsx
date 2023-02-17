@@ -33,10 +33,10 @@ function Hero() {
         </div>
       </div>
       <div className={s.contentRail}>
-        <div>
+        <div className={s.astroMobileDiv}>
           <img className={s.astroMobile2} src={professionalLg} />
         </div>
-        <div className={cn("relative py-4", s.listContainer)}>
+        <div className={cn("relative xl:py-4", s.listContainer)}>
           <ul className={cn(s.list, "")}>
             <li className={s.item}>
               <img alt={"logo"} src={brit} />
@@ -48,9 +48,9 @@ function Hero() {
             <li className={s.item}>
               <img alt={"logo"} src={notepad} />
               <p>
-                Lezioni <b>quando vuoi,</b>
-                <br />
-                anche nel weekend
+                Lezioni <b>quando vuoi, </b>
+                anche nel <br />
+                weekend
               </p>
             </li>
             <li className={s.item}>
@@ -61,7 +61,7 @@ function Hero() {
               </p>
             </li>
           </ul>
-          <div className="flex flex-direction w-full relative h-[236px]">
+          <div className="flex flex-direction w-full relative h-[236px] max-w-[300px]">
             <picture>
               <source media="(max-width:360px)" srcSet={professionalSm} />
               <source media="(max-width:480px)" srcSet={professionalSm} />

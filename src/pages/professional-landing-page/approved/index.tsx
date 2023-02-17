@@ -6,13 +6,15 @@ import {
   CaCambridgeAssessment,
   CaMinistryOfEducation,
   CaIelts,
+  CaApprovedBy,
+  CaBritCouncilMobile,
 } from "../../../components/Icons";
 
 import s from "./index.module.css";
 import cn from "classnames";
 
 import mainItem from "../../../assets/images/backgrounds/main-item@1440px.png";
-import professionalIllus from "../../../assets/proffessionalIllus.svg";
+import professionalIllus from "../../../assets/professionalIllus.png";
 
 function Approved() {
   const [count, setCount] = useState(0);
@@ -70,10 +72,12 @@ function Approved() {
         <div className={s.svgContainer}>
           {/* <div className="grid  grid-cols-2 lg:grid-cols-4 items-center gap-8 w-[95%] mx-auto"> */}
           <CaMinistryOfEducation />
-          <CaBritCouncil />
-          <CaCambridgeAssessment />
-          <CaIelts />
+          <CaBritCouncil className="hidden lg:block" />
+          <CaIelts className="hidden lg:block" />
+          <CaBritCouncilMobile className="lg:hidden" />
+          <CaCambridgeAssessment className="col-span-2 lg:col-span-1" />
         </div>
+        <CaApprovedBy className="mx-auto hidden lg:block" />
       </div>
     </section>
   );
