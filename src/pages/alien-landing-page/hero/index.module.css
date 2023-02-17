@@ -180,7 +180,7 @@
   }
   .hero .astroMobile2 {
     display: block;
-    top: min(10vh, 108px);
+    top: min(10vh, 73px);
     left: 0;
     right: unset;
     /* width: 675px; */
@@ -296,5 +296,10 @@
   .contentRail {
     gap: 8vw;
     /* margin-top: 4rem; */
+  }
+}
+@media only screen and (min-width: 1925px) {
+  .astroMobile2 {
+    top: 29px !important;
   }
 }
