@@ -7,7 +7,7 @@ import bgIntro528 from "../../../assets/images/backgrounds/bg-intro@528.svg";
 import bgIntro2618 from "../../../assets/images/backgrounds/bg-intro@2618.svg";
 import asFix from "../../../assets/images/backgrounds/as-fix.svg";
 import professionalLg from "../../../assets/professional@lg.svg";
-import professionalSm from "../../../assets/professional@sm.svg";
+import professionalSm from "../../../assets/professional@sm.png";
 import heroLogo from "../../../assets/images/logos/hero-logo.svg";
 import bgAstro from "../../../assets/images/backgrounds/bg-astro@1440px.png";
 import brit from "../../../assets/icons/brit.png";
