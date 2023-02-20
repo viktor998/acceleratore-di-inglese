@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding-top: 34px;
+  padding-bottom: 51px;
+  background: #d9daf3;
+  
+}
+@media only screen and (min-width: 1024px) {
+  .root {
+    background: none;
+  }
+}
