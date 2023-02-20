@@ -153,9 +153,7 @@
     z-index: 3;
     height: 100%;
   }
-  .list {
-    align-items: center;
-  }
+
 }
 .contentRail {
   display: flex;
@@ -195,7 +193,7 @@
   .hero .astroMobile2 {
     display: block;
     top: -37vh;
-    left: 0;
+    left: calc(-110px +  1vw);
     right: unset;
     width: 675px;
     max-width: 350px;
@@ -275,6 +273,7 @@
   }
   .hero .astroMobile2 {
     display: block;
+
   }
   .item p {
     font-size: 32px;
@@ -285,6 +284,7 @@
   .intro .text-box {
     height: 100%;
   }
+
 }
 
 @media only screen and (min-height: 900px) {
@@ -323,7 +323,7 @@
   .hero .astroMobile2 {
     display: block;
     top: -37vh;
-    left: 0;
+    left: -182px;
     right: unset;
     max-width: 675px;
     width: calc(350px + 8vw);
