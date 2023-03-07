@@ -263,9 +263,9 @@ function QuickRegister(props: Props) {
     <ThemeProvider theme={theme}>
       <Box
         className={cn(s.root, className)}
-        component="a"
+        component="form"
         href={link}
-        // onSubmit={submitForm}
+        onSubmit={submitForm}
       >
         <div className="flex flex-col gap-4 max-w-[579px]">
           <div className="flex md:flex-row flex-col gap-x-3">
