@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "@splidejs/react-splide/css";
 import s from "./index.module.css";
 import { Box, } from "@mui/material";
@@ -22,6 +22,7 @@ import "swiper/css/navigation";
 import "swiper/css";
 import { Autoplay, Lazy } from "swiper";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 
 const classNames = (...classes: string[]) => {
@@ -80,6 +81,13 @@ function Testimonies() {
     if (swiperRef.current) swiperRef.current?.autoplay.start();
   };
 
+  const lng = navigator.language
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(lng)
+  }, [])
+
   return (
     <section className={s.root}>
       <picture>
@@ -94,9 +102,12 @@ function Testimonies() {
         />
       </picture>
       <div className={s.content}>
-        <p className={s.heading}>Ecco cosa dicono di noi</p>
+        <p className={s.heading}>
+          {/* Ecco cosa dicono di noi */}
+          {t('testimonies.title')}
+        </p>
 
-        <Box
+        {/* <Box
           onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
         >
           <Swiper
@@ -112,7 +123,7 @@ function Testimonies() {
               </SwiperSlide>
             ))}
           </Swiper>
-        </Box>
+        </Box> */}
         <div className={s.svgContainer}>
           <CaForbes />
           <CaLaRepublica />

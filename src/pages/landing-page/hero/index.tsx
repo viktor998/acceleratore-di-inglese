@@ -11,8 +11,17 @@ import bgAstro from "../../../assets/images/backgrounds/bg-astro@1440px.png";
 import brit from "../../../assets/icons/brit.png";
 import notepad from "../../../assets/icons/notepad.png";
 import snap from "../../../assets/icons/snap.png";
+import { useTranslation } from 'react-i18next';
+import { useEffect } from "react";
 
 function Hero() {
+  const lng = navigator.language
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(lng)
+  }, [])
+
   return (
     <section className={s.hero}>
       <div className={s.intro}>
@@ -26,8 +35,10 @@ function Hero() {
         <div className={s["text-box"]}>
           <img alt={"logo"} src={heroLogo} />
           <h1>
-            C1 in 3 mesi o<br />
-            vieni rimborsato
+            {/* C1 in 3 mesi o<br />
+            vieni rimborsato */}
+            {t('hero.headerTop')}<br></br>
+            {t('hero.headerBottom')}
           </h1>
         </div>
       </div>
@@ -37,23 +48,29 @@ function Hero() {
             <li className={s.item}>
               <img alt={"logo"} src={brit} />
               <p>
-                Tutor <b>madrelingua</b> <br />
-                inglese certificati
+                {/* Tutor <b>madrelingua</b> <br />
+                inglese certificati */}
+                {t('hero.benefits.first.initial')} <b>{t('hero.benefits.first.bold')}</b> <br />
+                {t('hero.benefits.first.final')}
               </p>
             </li>
             <li className={s.item}>
               <img alt={"logo"} src={notepad} />
               <p>
-                Lezioni <b>quando vuoi,</b>
+                {/* Lezioni <b>quando vuoi,</b>
                 <br />
-                anche nel weekend
+                anche nel weekend */}
+                {t('hero.benefits.second.initial')} <b>{t('hero.benefits.second.bold')}</b> <br />
+                {t('hero.benefits.second.final')}
               </p>
             </li>
             <li className={s.item}>
               <img alt={"logo"} src={snap} />
               <p>
-                Costa <b>molto meno</b>
-                <br /> delle scuole di inglese
+                {/* Costa <b>molto meno</b>
+                <br /> delle scuole di inglese */}
+                {t('hero.benefits.third.initial')} <b>{t('hero.benefits.third.bold')}</b> <br />
+                {t('hero.benefits.third.final')}
               </p>
             </li>
           </ul>

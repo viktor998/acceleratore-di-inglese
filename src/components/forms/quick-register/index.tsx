@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import s from "./index.module.css";
 import cn from "classnames";
 import axios from "axios";
@@ -15,6 +15,7 @@ import {
   Checkbox,
 } from "@mui/material";
 import { theme } from "../../../assets/theme/theme";
+import { useTranslation } from "react-i18next";
 const BASE = import.meta.env.VITE_BASE_URL;
 
 type Props = {
@@ -259,6 +260,13 @@ function QuickRegister(props: Props) {
       });
   };
 
+  const lng = navigator.language
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(lng)
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <Box
@@ -273,12 +281,14 @@ function QuickRegister(props: Props) {
               <div
                 className={"text-base font-bold label md:text-xl lg:text-2xl "}
               >
-                Nome
+                {/* Nome */}
+                {t('form.firstName')}
               </div>
               <TextField
                 sx={inputStyle}
                 name={"name"}
-                placeholder={"Mario"}
+                // placeholder={"Mario"}
+                placeholder={t('form.placeHolder.firstName')}
                 variant="standard"
                 value={data?.name ?? ""}
                 error={error.name}
@@ -293,13 +303,15 @@ function QuickRegister(props: Props) {
               <div
                 className={"text-base font-bold label md:text-xl lg:text-2xl "}
               >
-                Cognome
+                {/* Cognome */}
+                {t('form.surname')}
               </div>
               <TextField
                 sx={inputStyle}
                 error={error?.lname == true}
                 name={"lname"}
-                placeholder={"Rossi"}
+                // placeholder={"Rossi"}
+                placeholder={t('form.placeHolder.surname')}
                 variant="standard"
                 value={data?.lname ?? ""}
                 onChange={handleChange}
@@ -314,7 +326,8 @@ function QuickRegister(props: Props) {
             <div
               className={"text-base font-bold label md:text-xl lg:text-2xl "}
             >
-              Telefono
+              {/* Telefono */}
+              {t('form.phone')}
             </div>
             <MuiTelInput
               sx={inputStyle}
@@ -337,13 +350,15 @@ function QuickRegister(props: Props) {
             <div
               className={"text-base font-bold label md:text-xl lg:text-2xl "}
             >
-              Email
+              {/* Email */}
+              {t('form.email')}
             </div>
             <TextField
               sx={inputStyle}
               error={error?.email == true}
               name={"email"}
-              placeholder={"mariorossi@email.com"}
+              // placeholder={"mariorossi@email.com"}
+              placeholder={t('form.placeHolder.email')}
               variant="standard"
               value={data?.email ?? ""}
               onChange={handleChange}
@@ -362,7 +377,8 @@ function QuickRegister(props: Props) {
                 value={checked}
               />
               <p className={s.terms + " ml-2"}>
-                Accetto la{" "}
+                {/* Accetto la */}
+                {t('form.checkBoxPrivacy.initial')}{" "}
                 <a
                   target={"_blank"}
                   href="https://www.iubenda.com/privacy-policy/22694950"
@@ -370,7 +386,8 @@ function QuickRegister(props: Props) {
                     color: "var(--clr-violet-300)",
                   }}
                 >
-                  Privacy Policy
+                  {/* Privacy Policy */}
+                  {t('form.checkBoxPrivacy.colorChange')}
                 </a>
               </p>
             </div>
@@ -386,10 +403,11 @@ function QuickRegister(props: Props) {
 
           <button
             disabled={isLoading}
-            className="btn-green btn-sm w-[265px] py-6 mx-auto flex items-center justify-center"
+            className="btn-green btn-sm w-[265px] uppercase py-6 mx-auto flex items-center justify-center"
             type="submit"
           >
-            RICHIEDI INFO {isLoading ? <CircleLoading /> : null}
+            {/* RICHIEDI INFO {isLoading ? <CircleLoading /> : null} */}
+            {t('form.buttonInfo')} {isLoading ? <CircleLoading /> : null}
           </button>
         </div>
       </Box>

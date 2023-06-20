@@ -4,6 +4,8 @@ import LandingPage from "./pages/landing-page";
 import AlienLandingPage from "./pages/alien-landing-page";
 import ProfessionalLandingPage from "./pages/professional-landing-page/index";
 
+import './utils/i18n.ts'
+
 function App() {
   return (
     <Routes>
