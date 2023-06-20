@@ -12,6 +12,11 @@ function App() {
         <Route path="alien" element={<AlienLandingPage />} />
         <Route path="professional" element={<ProfessionalLandingPage />} />
       </Route>
+      <Route path="/acceleratore-di-inglese/ads/:traking_id" >
+        <Route index element={<LandingPage />} />
+        <Route path="alien" element={<AlienLandingPage />} />
+        <Route path="professional" element={<ProfessionalLandingPage />} />
+      </Route>
     </Routes>
 
   );
