@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import QuickRegister from "../../../components/forms/quick-register";
 import {
   CaBritCouncil,
@@ -15,54 +15,78 @@ import cn from "classnames";
 
 import mainItem from "../../../assets/images/backgrounds/main-item@1440px.png";
 import alienIllus from "../../../assets/alienIllus.svg";
+import { useTranslation } from "react-i18next";
 
 function Approved() {
   const [count, setCount] = useState(0);
+
+
+  const lng = navigator.language
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(lng)
+  }, [])
 
   return (
     <section className={cn(s.root, "container-padding")}>
       <div className={s.itemsContainer}>
         <img className={s.img} src={alienIllus} />
         <ul className={s.list}>
-          <p className={s.heading + " mb-10"}>Come funziona il percorso?</p>
+          <p className={s.heading + " mb-10"}>
+            {/* Come funziona il percorso? */}
+            {t('approved.title')}
+          </p>
           <li className={s.bar}>
             <CaStar />
             <p>
-              Lezioni online e <br />
-              orari a tua scelta
+              {/* Lezioni online e <br />
+              orari a tua scelta */}
+              {t('approved.first.initial')} <br/>
+              {t('approved.first.final')}
             </p>
           </li>
           <li className={s.bar}>
             <CaStar />
             <p>
-              Classi da massimo <br /> 3 persone
+              {/* Classi da massimo <br /> 3 persone */}
+              {t('approved.second.initial')} <br/>
+              {t('approved.second.final')}
             </p>
           </li>
           <li className={s.bar}>
             <CaStar />
             <p>
-              App con simulatore
-              <br /> d’esame
+              {/* App con simulatore
+              <br /> d’esame */}
+              {t('approved.third.initial')} <br/>
+              {t('approved.third.final')}
             </p>
           </li>
           <li className={s.bar}>
             <CaStar />
             <p>
-              Preparazione esami
-              <br /> IELTS Cambridge
+              {/* Preparazione esami
+              <br /> IELTS Cambridge */}
+              {t('approved.fourth.initial')} <br/>
+              {t('approved.fourth.final')}
             </p>
           </li>
           <li className={s.bar}>
             <CaStar />
             <p>
-              Tutor madrelingua <br />
-              inglesi certificati
+              {/* Tutor madrelingua <br />
+              inglesi certificati */}
+              {t('approved.fifth.initial')} <br/>
+              {t('approved.fifth.final')}
             </p>
           </li>
           <li className={s.bar}>
             <CaStar />
             <p>
-              Certificato o <br /> rimborsato
+              {/* Certificato o <br /> rimborsato */}
+              {t('approved.sixth.initial')} <br/>
+              {t('approved.sixth.final')}
             </p>
           </li>
         </ul>
