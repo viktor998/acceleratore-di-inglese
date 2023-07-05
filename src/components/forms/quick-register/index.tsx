@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import { theme } from "../../../assets/theme/theme";
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 const BASE = import.meta.env.VITE_BASE_URL;
 
 type Props = {
@@ -82,10 +83,12 @@ interface FormData {
 
 function QuickRegister(props: Props) {
   const { className } = props;
+  const { traking_id } = useParams();
   const [data, setData] = useState<FormData>();
   const [error, setError] = useState<any>({});
   const [checked, setChecked] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [leadData, setLeadData] = useState<any>(null);
 
   const [generalError, setGeneralError] = useState<boolean | string>(false);
   const [link, setLink] = useState<string>("");
@@ -212,7 +215,7 @@ function QuickRegister(props: Props) {
       email: subData?.email,
       phone: subData?.phone?.replace(/\s/g, ""),
       status: "Nuovo",
-      details: JSON.stringify(details),
+      details: leadData ? JSON.stringify(leadData) : JSON.stringify(details),
       updates,
     };
 
@@ -266,6 +269,27 @@ function QuickRegister(props: Props) {
   useEffect(() => {
     i18n.changeLanguage(lng)
   }, [])
+  const getAdsData = async () => {
+    const adsData = await axios.post(BASE + `/lead/${traking_id}`, { traking_id }, {
+      headers: {
+        "Content-type": "application/json",
+        Accept: "application/json",
+      },
+    }).then(res => res.data)
+
+    if (adsData?.[0].label !== "") {
+      setLeadData(adsData)
+    }
+
+  }
+
+
+  React.useEffect(() => {
+    if (!traking_id) return
+
+    getAdsData()
+
+  }, [traking_id])
 
   return (
     <ThemeProvider theme={theme}>

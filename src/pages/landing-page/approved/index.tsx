@@ -40,7 +40,7 @@ function Approved() {
             <p>
               {/* Lezioni online e <br />
               orari a tua scelta */}
-              {t('approved.first.initial')} <br/>
+              {t('approved.first.initial')} <br />
               {t('approved.first.final')}
             </p>
           </li>
@@ -48,7 +48,7 @@ function Approved() {
             <CaStar />
             <p>
               {/* Classi da massimo <br /> 3 persone */}
-              {t('approved.second.initial')} <br/>
+              {t('approved.second.initial')} <br />
               {t('approved.second.final')}
             </p>
           </li>
@@ -57,7 +57,7 @@ function Approved() {
             <p>
               {/* App con simulatore
               <br /> d’esame */}
-              {t('approved.third.initial')} <br/>
+              {t('approved.third.initial')} <br />
               {t('approved.third.final')}
             </p>
           </li>
@@ -66,7 +66,7 @@ function Approved() {
             <p>
               {/* Preparazione esami
               <br /> IELTS Cambridge */}
-              {t('approved.fourth.initial')} <br/>
+              {t('approved.fourth.initial')} <br />
               {t('approved.fourth.final')}
             </p>
           </li>
@@ -75,7 +75,7 @@ function Approved() {
             <p>
               {/* Tutor madrelingua <br />
               inglesi certificati */}
-              {t('approved.fifth.initial')} <br/>
+              {t('approved.fifth.initial')} <br />
               {t('approved.fifth.final')}
             </p>
           </li>
@@ -83,7 +83,7 @@ function Approved() {
             <CaStar />
             <p>
               {/* Certificato o <br /> rimborsato */}
-              {t('approved.sixth.initial')} <br/>
+              {t('approved.sixth.initial')} <br />
               {t('approved.sixth.final')}
             </p>
           </li>
@@ -97,7 +97,7 @@ function Approved() {
           <CaBritCouncil className="hidden lg:block" />
           <CaIelts className="hidden lg:block" />
           <CaBritCouncilMobile className="lg:hidden" />
-          <CaCambridgeAssessment className="col-span-2 lg:col-span-1" />
+          {/* <CaCambridgeAssessment className="col-span-2 lg:col-span-1" /> */}
         </div>
         <CaApprovedBy className="mx-auto hidden lg:block" />
       </div>

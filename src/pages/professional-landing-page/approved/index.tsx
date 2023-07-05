@@ -75,7 +75,7 @@ function Approved() {
           <CaBritCouncil className="hidden lg:block" />
           <CaIelts className="hidden lg:block" />
           <CaBritCouncilMobile className="lg:hidden" />
-          <CaCambridgeAssessment className="col-span-2 lg:col-span-1" />
+          {/* <CaCambridgeAssessment className="col-span-2 lg:col-span-1" /> */}
         </div>
         <CaApprovedBy className="mx-auto hidden lg:block" />
       </div>
