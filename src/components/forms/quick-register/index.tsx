@@ -277,8 +277,8 @@ function QuickRegister(props: Props) {
       },
     }).then(res => res.data)
 
-    if (adsData?.[0].label !== "") {
-      setLeadData(adsData)
+    if (adsData?.tracking?.[0]?.label) {
+      setLeadData(adsData?.tracking)
     }
 
   }
