@@ -248,7 +248,7 @@ function QuickRegister(props: Props) {
       .then((res) => res)
       .then((data) => {
         if (data.data.token) {
-          location.href = `https://edusogno.com/form/edusogno-inglese/${data.data.token}`;
+          location.href = `https://edusogno.com/form/edusogno-inglese/${data.data.token}/otp-verification`;
         }
         setIsLoading(false);
       })
