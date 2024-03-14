@@ -19,6 +19,8 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 const BASE = import.meta.env.VITE_BASE_URL;
 
+const BASE_API = "https://api.edusogno.com/api/"
+
 type Props = {
   className?: string;
 };
@@ -236,7 +238,7 @@ function QuickRegister(props: Props) {
 
     axios
       .post(
-        BASE + "/crm",
+        `${BASE_API}v2/crm/create`,
         { ...newData },
         {
           headers: {
