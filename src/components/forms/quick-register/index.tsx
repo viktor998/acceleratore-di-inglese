@@ -249,8 +249,21 @@ function QuickRegister(props: Props) {
       )
       .then((res) => res)
       .then((data) => {
-        if (data.data.token) {
-          location.href = `https://edusogno.com/form/edusogno-inglese/${data.data.token}/otp-verification`;
+        const crm = data?.data
+        // if (data.data.token) {
+        //   location.href = `https://edusogno.com/form/edusogno-inglese/${data.data.token}/otp-verification`;
+        // }
+
+        if (!crm?.is_valid_name) {
+          window.location.href = `https://edusogno.com/form/edusogno-inglese/${crm?.token}/will-contact-you`
+        } else {
+          let redirect = `https://edusogno.com/form/edusogno-inglese/${crm?.token}/otp-verification`
+
+          if (ads.length > 0) {
+            redirect = redirect + "?utm_edusogno=true"
+          }
+
+          window.location.href = redirect
         }
         setIsLoading(false);
       })
