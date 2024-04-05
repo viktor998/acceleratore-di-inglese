@@ -209,6 +209,14 @@ function QuickRegister(props: Props) {
     ];
     updates = JSON.stringify(updates);
 
+    const params = new URLSearchParams(window.location.search);
+
+    let paramsObj = {};
+    // Using forEach for a more appropriate semantic use
+    params.forEach((value, key) => {
+      paramsObj[key] = value;
+    });
+
     let submit = {
       name: subData.name,
       lname: subData.lname,
@@ -219,6 +227,7 @@ function QuickRegister(props: Props) {
       status: "Nuovo",
       details: leadData ? JSON.stringify(leadData) : JSON.stringify(details),
       updates,
+      ...paramsObj,
     };
 
     return submit;
@@ -260,7 +269,7 @@ function QuickRegister(props: Props) {
           let redirect = `https://edusogno.com/form/edusogno-inglese/${crm?.token}/otp-verification`
 
           if (ads.length > 0) {
-            redirect = redirect + "?utm_edusogno=true"
+            redirect = redirect + window.location.search + "&utm_edusogno=true"
           }
 
           window.location.href = redirect
@@ -292,9 +301,21 @@ function QuickRegister(props: Props) {
       },
     }).then(res => res.data)
 
-    if (adsData?.tracking?.[0]?.label) {
-      setLeadData(adsData?.tracking)
-    }
+    if (!adsData?.tracking?.[0]?.label) return
+
+    let ads = adsData?.tracking?.filter(
+      (el) => el.label != "complete_url"
+    )
+
+    ads = [
+      ...ads,
+      {
+        label: "utm_page",
+        value: window.location.href,
+      },
+    ]
+
+    setLeadData(ads)
 
   }
 
